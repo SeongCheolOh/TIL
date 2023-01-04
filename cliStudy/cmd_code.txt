@@ -1,0 +1,16 @@
+윈도우+cmd(command)=명령프롬포트
+dir(directory)=현재 위치의 파일들 표시
+cd [blah] = cd 폴더로 위치 이동하기
+cd.. = 상위 폴더로 이동하기
+mkdir [blah] = 폴더 만들기
+code [blah].확장자 = 파일 만들기
+del(delete) [blah].확장자 = 파일 지우기
+    *파일을 지울 때는 열리지 않은 상태로
+rd [blah] = 폴더 지우기
+    *폴더를 지울 때는 상위 위치에서
+    *폴더 안 내용물이 없어야 함
+ipconfig
+ipconfig /all
+cls = clear screen
+
+tip) https://zetawiki.com/wiki/%EC%9C%88%EB%8F%84%EC%9A%B0_CMD_%EB%AA%85%EB%A0%B9%EC%96%B4_%EB%AA%A9%EB%A1%9D

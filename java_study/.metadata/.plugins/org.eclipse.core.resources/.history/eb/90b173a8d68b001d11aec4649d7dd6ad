@@ -1,0 +1,26 @@
+package ch02.sec01;
+
+public class VarUEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int hour = 3;
+		int minute = 5;
+		System.out.println(hour + "½Ã°£" + minute + "ºÐ");
+		
+		int totalMinute = (hour*60) + minute;
+		System.out.println("ÃÑ " + totalMinute + "ºÐ");
+		
+		int x=3, y=5;
+		swap(x,y);
+		System.out.println("x=" + x + ",y=" + y);
+
+	}//end main
+	static void swap(int x, int y) {
+		int temp = y; // temp = 5
+		y = x; // y = 3
+		x = temp; // x = 5
+		System.out.println("x=" + x + ",y=" + y);
+
+}//end class
+}

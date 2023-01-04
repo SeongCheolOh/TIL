@@ -1,0 +1,15 @@
+package javaBasic1;
+
+public class VarEx333 {
+
+	String name="홍길동"
+
+    public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String name="홍길동";
+	}
+	
+}
+//클래스명 VarEx333 생성 후 이름 VarEx334로 바꿔보기(파일명도 바꿔야 함) f2 key
+
+class VarEx111{}
