@@ -16,6 +16,4 @@ public class VarEcEx {
 	}//end main()
 	
 
-	}
-
-}//end class
+	}//end class

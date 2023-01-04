@@ -132,3 +132,5 @@ ctlr i - 자동 정렬
            집과 강의장 같은 파일의내용이 다르고, 한쪽을 push>>반대편을 pull 하면 push한 쪽 내용이 추가가 된다
         pull 먼저, commit 후 push를 나중에 >> 충돌 방지
         *pull - add- commit - push 순으로*
+
+자습))part1>chap1 완료
