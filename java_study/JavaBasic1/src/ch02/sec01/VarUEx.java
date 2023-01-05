@@ -29,18 +29,16 @@ public class VarUEx {
 		System.out.println("x=" + x + ",y=" + y);
 
 		//자료형(숫자)
-		//-128~+127범위 >> 1byte
-		byte kor = 100; // 1byte
-		//-32768~+32767 >> 2byte
-		short eng = 85; // 2byte
-		//-2,147,483,648~2,147,483,647 >> 4byte
-		int mat = 90; // 4byte
-		long sci = 86; // 8byte
+		byte kor = 100; // 1byte = 8bit >> -128 ~ 127
+		short eng = 85; // 2byte = 16bit >> -32768 ~ 32767
+		int mat = 90; // 4byte = 32bit >> -2,147,483,648 ~ 2,147,483,647
+		long sci = 86; // 8byte = 64bit >> -2의63승 ~ 2의63승-1
+		byte kor1 = 2;
 		
-		byte kor1 = 89;
-		
-		int total = kor + kor1; // 4칙연산 부호는 4byte 차지해서 오류
-		//그래서 total 앞 4byte짜리인 int를 붙여야 함
+		/* byte total = kor + kor1; >> 오류
+		 *  4칙연산 부호는 4byte 차지해서 total 앞 4byte짜리인 int를 붙여야 함 */
+		int total = (kor+kor1);
+		System.out.println(total);  // 100+89인데 왜 11이 나오지..?
 
 		
 }//end class
