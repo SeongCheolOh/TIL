@@ -6,21 +6,21 @@ public class VarUEx {
 		// TODO Auto-generated method stub
 		int hour = 3;
 		int minute = 5;
-		System.out.println(hour + "½Ã°£" + minute + "ºĞ");
+		System.out.println(hour + "ì‹œê°„" + minute + "ë¶„");
 		
 		int totalMinute = (hour*60) + minute;
-		System.out.println("ÃÑ " + totalMinute + "ºĞ");
+		System.out.println("ì´ " + totalMinute + "ë¶„");
 		
 		int x=3, y=5;
 		swap(x,y);
 		System.out.println("x=" + x + ",y=" + y);
 
-		int bkor = 0b1011;//2Áø¼ö
+		int bkor = 0b1011;//2ì§„ìˆ˜
 		System.out.println(bkor);
-		int var1=0b1011; // 2Áø¼ö
-		int var2=0206; //8Áø¼ö
-		int var3=365;//10Áø¼ö
-		int var4=0xb3//16Áø¼ö
+		int var1 = 0b1011; // 2ì§„ìˆ˜
+		int var2 = 0206; //8ì§„ìˆ˜
+		int var3 = 365;//10ì§„ìˆ˜
+		int var4 = 0xb3;//16ì§„ìˆ˜
 	}//end main
 	static void swap(int x, int y) {
 		int temp = y; // temp = 5
@@ -28,8 +28,8 @@ public class VarUEx {
 		x = temp; // x = 5
 		System.out.println("x=" + x + ",y=" + y);
 
-		//ÀÚ·áÇü(¼ıÀÚ)
-		//-128~+127¹üÀ§ >> 1byte
+		//ìë£Œí˜•(ìˆ«ì)
+		//-128~+127ë²”ìœ„ >> 1byte
 		byte kor = 100; // 1byte
 		//-32768~+32767 >> 2byte
 		short eng = 85; // 2byte
@@ -39,8 +39,8 @@ public class VarUEx {
 		
 		byte kor1 = 89;
 		
-		int total = kor + kor1; // 4Ä¢¿¬»ê ºÎÈ£´Â 4byte Â÷ÁöÇØ¼­ ¿À·ù
-		//±×·¡¼­ total ¾Õ 4byteÂ¥¸®ÀÎ int¸¦ ºÙ¿©¾ß ÇÔ
+		int total = kor + kor1; // 4ì¹™ì—°ì‚° ë¶€í˜¸ëŠ” 4byte ì°¨ì§€í•´ì„œ ì˜¤ë¥˜
+		//ê·¸ë˜ì„œ total ì• 4byteì§œë¦¬ì¸ intë¥¼ ë¶™ì—¬ì•¼ í•¨
 
 		
 }//end class

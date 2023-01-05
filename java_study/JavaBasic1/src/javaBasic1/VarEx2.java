@@ -10,16 +10,15 @@ public class VarEx2 {
 	}
 
 public void _calc() {}
-//½Äº°ÀÚ ¿µ¹®ÀÚ ´ë¼Ò¹®ÀÚ, _, ¼ıÀÚ
-//Ã¹±ÛÀÚ ¹İµå½Ã ¿µ¹®ÀÚ, _
-//±³Àç p.35 ezenAcadamy seoulUniv
+//ì‹ë³„ì ì˜ë¬¸ì ëŒ€ì†Œë¬¸ì, _, ìˆ«ì
+//ì²«ê¸€ì ë°˜ë“œì‹œ ì˜ë¬¸ì, _
+//êµì¬ p.35 ezenAcadamy seoulUniv
 }
 
-//Å¬·¡½º¸í VarEx333 ÀÌ¸§¹Ù²Ù±â VarEx334 ÆÄÀÏ¸í ¼öÁ¤ÇØº¸±â F2 key »ç¿ë
-class VarEx111{}
+//í´ë˜ìŠ¤ëª… VarEx333 ì´ë¦„ë°”ê¾¸ê¸° VarEx334 íŒŒì¼ëª… ìˆ˜ì •í•´ë³´ê¸° F2 key ì‚¬ìš©
+//class VarEx111{}
 
-public class kk{}
-//publicÀº class ´ç ÇÏ³ª¸¸ Á¸Àç °¡´É
+//publicì€ class ë‹¹ í•˜ë‚˜ë§Œ ì¡´ì¬ ê°€ëŠ¥
 
-boolean ox=true
-//public ¹Ù±ù¿¡ ÀÖ¾î¼­ ¿À·ù°¡ ³²
+//boolean ox=true
+//public ë°”ê¹¥ì— ìˆì–´ì„œ ì˜¤ë¥˜ê°€ ë‚¨

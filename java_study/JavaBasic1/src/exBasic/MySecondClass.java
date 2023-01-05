@@ -5,16 +5,16 @@ public class MySecondClass {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String line1="ÀÚ¹Ù´Â";
-		String line2="½Ã½ºÅÛ¿¡ µ¶¸³ÀûÀÎ";
-		String line3="°´Ã¼ÁöÇâ ÇÁ·Î±×·¡¹Ö ¾ğ¾îÀÌ´Ù";
-		// º¯¼ö
+		String line1="ìë°”ëŠ”";
+		String line2="ì‹œìŠ¤í…œì— ë…ë¦½ì ì¸";
+		String line3="ê°ì²´ì§€í–¥ í”„ë¡œê·¸ë˜ë° ì–¸ì–´ì´ë‹¤";
+		// ë³€ìˆ˜
 		
 		System.out.println(line1);
 		System.out.println(line2);
 		System.out.println(line3);
-        //°³Çà¹®ÀÚ \nÀ¸·Î ÁÙ¹Ù²Ş ÇÒ ¼ö ÀÖ´Ù
-		System.out.println("ÀÚ¹Ù´Â\n½Ã½ºÅÛ¿¡ µ¶¸³ÀûÀÎ\n°´Ã¼ÁöÇâ ÇÁ·Î±×·¡¹Ö ¾ğ¾îÀÌ´Ù");
+        //ê°œí–‰ë¬¸ì \nìœ¼ë¡œ ì¤„ë°”ê¿ˆ í•  ìˆ˜ ìˆë‹¤
+		System.out.println("ìë°”ëŠ”\nì‹œìŠ¤í…œì— ë…ë¦½ì ì¸\nê°ì²´ì§€í–¥ í”„ë¡œê·¸ë˜ë° ì–¸ì–´ì´ë‹¤");
 	}
 
 }

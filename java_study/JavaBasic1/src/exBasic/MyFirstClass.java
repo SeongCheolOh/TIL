@@ -3,14 +3,14 @@ package exBasic;
 public class MyFirstClass {
 
 	public static void main(String[] args) {
-		//½Ç½À >> ´ëÇĞ ÇĞ°ú ÇĞ¹ø °¢°¢ ÇÑÁÙ¿¡ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥ ¤¸
-		// º¯¼ö ¼±¾ğÇÏ±â
-		String collageName; //´ëÇĞ¸í
-		String department; //ÇĞ°ú
-		String student_id; //ÇĞ¹ø
-		//º¯¼ö¿¡ °ªÀ» ´ëÀÔ
-		collageName = "¼­¿ï´ëÇĞ±³";
-		department = "ÄÄÇ»ÅÍ°øÇĞ°ú";
+		//ì‹¤ìŠµ >> ëŒ€í•™ í•™ê³¼ í•™ë²ˆ ê°ê° í•œì¤„ì— ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ ã…ˆ
+		// ë³€ìˆ˜ ì„ ì–¸í•˜ê¸°
+		String collageName; //ëŒ€í•™ëª…
+		String department; //í•™ê³¼
+		String student_id; //í•™ë²ˆ
+		//ë³€ìˆ˜ì— ê°’ì„ ëŒ€ì…
+		collageName = "ì„œìš¸ëŒ€í•™êµ";
+		department = "ì»´í“¨í„°ê³µí•™ê³¼";
 		student_id = "23080511";
 		
 		System.out.println(collageName);
@@ -18,20 +18,20 @@ public class MyFirstClass {
 		System.out.println(student_id);
 		
 		System.out.println("-----------");
-		System.out.println("ÇĞ±³ : " + collageName);
-		System.out.println("ÇĞ°ú : " + department);
-		System.out.println("ÇĞ¹ø : " + student_id);
+		System.out.println("í•™êµ : " + collageName);
+		System.out.println("í•™ê³¼ : " + department);
+		System.out.println("í•™ë²ˆ : " + student_id);
 
 		System.out.println("-----------");
-		System.out.println("ÇĞ±³ : " + collageName + "ÇĞ°ú : " + department + "ÇĞ¹ø : " + student_id);
+		System.out.println("í•™êµ : " + collageName + "í•™ê³¼ : " + department + "í•™ë²ˆ : " + student_id);
 
 		System.out.println("-----------");
-		System.out.print("ÇĞ±³ : " + collageName);
-		System.out.print("ÇĞ°ú : " + department);
-		System.out.print("ÇĞ¹ø : " + student_id);
+		System.out.print("í•™êµ : " + collageName);
+		System.out.print("í•™ê³¼ : " + department);
+		System.out.print("í•™ë²ˆ : " + student_id);
 		
 		System.out.println("-----------");
-		System.out.printf("ÇĞ±³ : %s, ÇĞ°ú : %s, ÇĞ¹ø : %s", collageName, department, student_id);
+		System.out.printf("í•™êµ : %s, í•™ê³¼ : %s, í•™ë²ˆ : %s", collageName, department, student_id);
 
 		
 	}

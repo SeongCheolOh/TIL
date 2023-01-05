@@ -4,13 +4,15 @@ public class VarEx {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//º¯¼ö ¼±¾ğ
-		int value;//4¹ÙÀÌÆ®
+		//ë³€ìˆ˜ ì„ ì–¸
+		//int value;//4byteÆ®
 		
-		//¿¬»ê °á°ú¸¦ º¯¼ö resultÀÇ ÃÊ±â°ªÀ¸·Î ´ëÀÔ
-		int result= value + 10;//value°ªÀÌ ¼³Á¤µÇÁö ¾Ê¾Æ ³ª´Â ¿À·ù
-		
-		//º¯¼ö result °ªÀ» ÀĞ°í ÄÜ¼Ö¿¡ Ãâ·Â
+		//ì—°ì‚° ê²°ê³¼ë¥¼ ë³€ìˆ˜ resultì˜ ì´ˆê¸°ê°’ìœ¼ë¡œ ëŒ€ì…
+		//int result= value + 10;//valueê°’ì´ ì„¤ì •ë˜ì§€ ì•Šì•„ ë‚˜ëŠ” ì˜¤ë¥˜
+		                       //ê·¸ë˜ì„œ 8ë²ˆì¤„ value = "~~~";ê¹Œì§€ ë¶™ì—¬ì¤˜ì•¼ í•¨
+		int value='5';
+		int result=(value+10);
+		//ë³€ìˆ˜ result ê°’ì„ ì½ê³  ì½˜ì†”ì— ì¶œë ¥
 		System.out.println(result);
 	}
 
