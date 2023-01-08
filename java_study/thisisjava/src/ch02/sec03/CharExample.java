@@ -9,9 +9,16 @@ public class CharExample {
 		char var1 = 'A'; // 'A'와 매핑되는 숫자 : 65로 대입
 		char var3 = '가'; // '가'와 매핑되는 숫자 : 44032로 대입
 		
+		System.out.println(var1);
+		System.out.println(var3);
+		
 		//유니코드가 정수이므로 char타입도 정수타입 >> 대입값에 ''를 안쓰고 유니코드 정수로 대입 가능
 		char c = 65; // 10진수 65와 매핑되는 'A'
 		char d = 0x0041; // 16진수 0x0041과 매핑되는 'A'
+		
+		System.out.println(c);
+		System.out.println(d);
+		
 		
 		char c1 = 'a'; // 문자 저장
 		char c2 = 65; // 유니코드 직접 저장
@@ -28,7 +35,6 @@ public class CharExample {
 		 * '';이렇게 달아붙이지 말고 ' '사이를 띄워줘라 >> 유니코드 32
 		 * char c=''; >> 에러 */
 		 char e=' ';
-		 System.out.println('가'+e+'나'); // 왜 띄어쓰기가 안 될까
 		
 		 
 		
