@@ -142,11 +142,11 @@ public class OperlandEx01 {
 		System.out.print("숫자 3을 입력==>");
 		int number8=Scr.nextInt();//	  250
 		
-		/* int middleNumber = (number6>=number7)? number6:number7;
+		int middleNumber = (number6>=number7)? number6:number7;
 		middleNumber = (number8>=middleNumber)? number6:number8;
 		System.out.println(middleNumber);
 		
-		int midNumber=0;//중간값을 넣을 변수
+		/* int midNumber=0;//중간값을 넣을 변수
 		if(number1!=maxNumber && number1!=midNumber)
 			midNumber=number1;
 		if(number2!=maxNumber && number2!=midNumber)
