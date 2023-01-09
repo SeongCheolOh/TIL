@@ -1,5 +1,7 @@
 package javaBasic1;
 
+import java.util.Scanner;
+
 public class OperlandEx01 {
 
 	public static void main(String[] args) {
@@ -94,16 +96,68 @@ public class OperlandEx01 {
 		//문제) 숫자 변수에 50을 입력하고 25이상이면 "포인트 적립 대상" 아니면 "포인트 적립 대상 아님"
 		int point=50;
 		System.out.println((25<=point)?"포인트적립대상":"포인트적립대상아님");
-
+		/* if(n>=25)
+			System.out.println("포인트대상");
+		else System.out.println("포인트 대상이 아닙니다");
+		System.out.println((n>=25)?"포인트대상":"포인트대상이 아닙니다"); */
+		
+		
 		//문제) 문자형 변수에 "자바"라고 입력하고, 자바가 아니면 B교실,C교실 입니다 // 자바이면 A교실 입니다
 		String word="자바";
 		String result1;
 		result1=(word.equals("자바")?"A교실입니다":"B,C교실입니다");
 		System.out.println(result1);
+		/* if(word.equals("자바"))
+			System.out.println("A교실");
+		else
+			System.out.println("B,C교실입니다"); */
 		
 		//문제) 숫자 2개를 입력받아서 큰 숫자를 삼항연산자 사용하여 출력하기 
-
+		Scanner sc = new Scanner(System.in);
+		System.out.print("숫자 1을 입력==>");
+		int number1=sc.nextInt();
+		System.out.print("숫자 2을 입력==>");
+		int number2=sc.nextInt();
+		int maxNumber = (number1 >= number2)   ? number1:number2;
+				System.out.println(maxNumber);
+				
 		//문제) 숫자 3개를 입력받아서 큰 숫자를 삼항연산자 사용하여 출력하기
+		Scanner scr = new Scanner(System.in);
+		System.out.print("숫자 1을 입력==>");
+		int number3=sc.nextInt();//10
+		System.out.print("숫자 2을 입력==>");
+		int number4=sc.nextInt();//20
+		System.out.print("숫자 3을 입력==>");
+		int number5=sc.nextInt();//30
+		maxNumber=(number3>=number4)? number3:number4;//20
+		maxNumber=(maxNumber>=number5)? maxNumber:number5;//30
+		System.out.println(maxNumber);
+		
+		//문제) 숫자 3개를 입력받아서 중간 숫자를 삼항연산자 사용하여 출력하기
+		Scanner Scr = new Scanner(System.in);
+		System.out.print("숫자 1을 입력==>");
+		int number6=Scr.nextInt();//   300
+		System.out.print("숫자 2을 입력==>");
+		int number7=Scr.nextInt();//	  150
+		System.out.print("숫자 3을 입력==>");
+		int number8=Scr.nextInt();//	  250
+		
+		/* int middleNumber = (number6>=number7)? number6:number7;
+		middleNumber = (number8>=middleNumber)? number6:number8;
+		System.out.println(middleNumber);
+		
+		int midNumber=0;//중간값을 넣을 변수
+		if(number1!=maxNumber && number1!=midNumber)
+			midNumber=number1;
+		if(number2!=maxNumber && number2!=midNumber)
+			midNumber=number2;
+		if(number3!=maxNumber && number3!=midNumber)
+			midNumber=number3;
+		
+		System.out.println("최대값은 " + maxNumber);
+		System.out.println("중간값은 " + midNumber);
+		System.out.println("최소값은 " + minNumber); */
+		
 		
 		//진도는 3장까지 나감
 		//숙제로 git에 업로드

@@ -1,5 +1,0 @@
-file
-import
-project from folder or archive
-directory - 열어야 할 폴더 선택
-fin
