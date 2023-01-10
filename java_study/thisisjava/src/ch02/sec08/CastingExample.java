@@ -4,6 +4,7 @@ public class CastingExample {
 
 	public static void main(String[] args) {
 		// 강제타입변환
+		// 큰 타입을 작은 타입의 허용범위로 쪼개서 저장
 		int var1 = 10;
 		byte var2 = (byte)var1;
 		System.out.println(var2); //10 그대로 유지

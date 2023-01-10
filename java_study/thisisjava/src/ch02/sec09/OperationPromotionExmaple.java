@@ -3,6 +3,8 @@ package ch02.sec09;
 public class OperationPromotionExmaple {
 
 	public static void main(String[] args) {
+		//연산식에서 자동 타입 변환
+		
 		byte result = 10+20; // 컴파일(우항) 단계에서 연산
 		System.out.println(result);
 		

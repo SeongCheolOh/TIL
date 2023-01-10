@@ -4,9 +4,22 @@ public class PrimitiveAndStringConversionExample {
 
 	public static void main(String[] args) {
 		// 문자열을 기본 타입으로 변환
+		// String 타입 >>정수 또는 실수로 변환 
+		//ex) String을 byte 로
+		//    String str = "10";
+		//    byte value = Byte.parseByte(str);
+		//    -----------------------------
+		//    String 변수1 = "문자열";
+		// ★  바꿀타입 변수2 = 바꿀타입.parse바꿀타입(변수1); 
+		// ★              = 바꿀타입.parse바꿀타입("문자열"); 
+		//    -----------------------------
+		//	  반대로
+		//    기본 타입을 문자열로 바꿀 땐
+		// ★  String.valueOf(기본타입값);   
 		int value1 = Integer.parseInt("10");
 		double value2 = Double.parseDouble("3.14");
 		boolean value3 = Boolean.parseBoolean("true");
+		
 		
 		System.out.println("value1: " + value1);
 		System.out.println("value2: " + value2);

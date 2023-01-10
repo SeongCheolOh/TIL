@@ -6,16 +6,16 @@ public class CompareOperatorExample {
 		// 비교 연산자
 		int num1 = 10;
 		int num2 = 10;
-		boolean result1 = (num1 == num2);
-		boolean result2 = (num1 != num2);
-		boolean result3 = (num1 <= num2);
+		boolean result1 = (num1 == num2); // 좌우가 같다
+		boolean result2 = (num1 != num2); // 좌우가 같지않다
+		boolean result3 = (num1 <= num2); // num2가 num1이상이다
 		System.out.println("result1: "+result1);
 		System.out.println("result2: "+result2);
 		System.out.println("result3: "+result3);
 		
 		char char1 = 'A';
 		char char2 = 'B';
-		boolean result4 = (char1<char2); // 65<66
+		boolean result4 = (char1<char2); // 65<66= true
 		System.out.println("result4: "+result4);
 		
 		int num3 = 1;

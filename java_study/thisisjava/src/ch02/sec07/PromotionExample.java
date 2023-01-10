@@ -23,7 +23,15 @@ public class PromotionExample {
 		floatValue = 100.5f;
 		double doubleValue = floatValue;
 		System.out.println("doubleValue : " + doubleValue);
-
+		
+		//예외
+		//byte >> char 로 타입변환은 불가능하다 (char에는 음수가 존재하지 않기 때문)
+		
+		long longValue1 = 5000000000l;
+		float floatValue1 = longValue1;
+		System.out.println(floatValue1); // 5.0E9f
+		double doubleValue1 = longValue1;
+		System.out.println(doubleValue1); // 5.0E9
 	}
 
 }

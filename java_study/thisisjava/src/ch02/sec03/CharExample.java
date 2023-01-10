@@ -7,12 +7,16 @@ public class CharExample {
 		 * 세계 각국의 문자를 0~65535 숫자로 매핑한 국제표준규약
 		 */
 		char var1 = 'A'; // 'A'와 매핑되는 숫자 : 65로 대입
+		char var2 = 65;
 		char var3 = '가'; // '가'와 매핑되는 숫자 : 44032로 대입
+		char var4 = 44032;
 		
 		System.out.println(var1);
+		System.out.println(var2);
 		System.out.println(var3);
+		System.out.println(var4);
 		
-		//유니코드가 정수이므로 char타입도 정수타입 >> 대입값에 ''를 안쓰고 유니코드 정수로 대입 가능
+		//유니코드(0~65535)가 정수이므로 char타입도 정수타입 >> 대입값에 ''를 안쓰고 유니코드 정수로 대입 가능
 		char c = 65; // 10진수 65와 매핑되는 'A'
 		char d = 0x0041; // 16진수 0x0041과 매핑되는 'A'
 		
@@ -21,10 +25,10 @@ public class CharExample {
 		
 		
 		char c1 = 'a'; // 문자 저장
-		char c2 = 65; // 유니코드 직접 저장
+		char c2 = 65; // 'A' 의 유니코드 직접 저장
 		
 		char c3 = '가'; // 문자 저장
-		char c4 = 44032; // 유니코드 직접 저장
+		char c4 = 44032; // '가' 의 유니코드 직접 저장
 		
 		System.out.println(c1);
 		System.out.println(c2);
