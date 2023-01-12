@@ -43,28 +43,60 @@ public class Ch04Ex {
 		// -------------------------------
 		// 1. 예금 | 2. 출금 | 3. 잔고 | 4. 종료
 		// -------------------------------
-		// 1을 치면 예끔 2를 치면 출금 3을 치면 잔고 4를 치면 종료
+		// 1을 치면 예금 2를 치면 출금 3을 치면 잔고 4를 치면 종료
 		
 		Scanner scr = new Scanner(System.in);
 		System.out.println("-----------------------");
 		System.out.println("은행 거래 프로그램");
 		System.out.println("-----------------------");
 		String num = null;
+		
+		int money=0; //입력 받는 돈
+		int balance=0; // 잔액
+		int adress=0; //계좌번호
 		while(true) {
 			System.out.println("---------------------------------");
-			System.out.println("1. 예금 | 2. 출금 | 3. 잔고 | 4. 종료");
+			System.out.println("1. 예금 | 2. 출금 | 3. 잔고 | 4. 이체 | 0. 종료");
 			System.out.println("---------------------------------");
 			System.out.println("선택> ");
 			num = scr.nextLine();
+			
 			switch(num) {
-			case "1": System.out.println("1. 예금");
-			case "2": System.out.println("2. 출금");
-			case "3": System.out.println("3. 잔고");
-			case "4": System.out.println("4. 종료");break;
-			default : 
+			case "1": {System.out.println("예금액>");
+						money = scr.nextInt();
+						scr.nextLine();
+						balance = balance + money; 
+						break;}
+			case "2": {System.out.println("출금액>");
+						money = scr.nextInt();
+						scr.nextLine();
+						//잔액<출금액이면 "잔액 부족입니다"라고 출력하세요
+						if(balance<money) {
+							System.out.println("잔액 부족입니다");}
+						else {balance = balance - money;}
+						break;}
+			case "3": {System.out.println("잔고액");
+						System.out.println(balance);
+						System.out.println();
+						
+						break;}
+			case "4": { // 이체할 계좌번호 > 이체할 금액 > 잔액보다 작으면 00계좌로 00금액이 이체됐습니다
+						System.out.println("이체해야 할 계좌번호를 입력해주세요");
+						adress = scr.nextInt();
+						System.out.println("잔액은 " + balance + "원 입니다");
+						System.out.println("이체 할 금액을 입력해주세요");
+						money = scr.nextInt();
+						scr.nextLine();
+						if(balance<money) {
+							System.out.println("잔액 부족입니다");}
+						else {balance = balance-money;
+							  System.out.println(adress + "계좌로 "+ money + "원이 이체됐습니다. 잔액은" +balance + "원 입니다");}
+						break;}			
+			case "0": {System.out.println("0. 종료"); 
+						break;}
+			default : System.out.println("잘못 입력하셨습니다. 다시 입력하세요.");
 			}
-			//여긴 while 속
-			break;
+			if(num.equals("0")) break;//여긴 while 속
 		}
 		
 		
