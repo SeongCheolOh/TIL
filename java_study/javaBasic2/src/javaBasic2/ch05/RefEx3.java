@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class RefEx3 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		//
 		Student1 s1 = new Student1();
 		Person1 p1 = new Person1();
 		s1.stName = "홍길동";

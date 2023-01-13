@@ -11,8 +11,10 @@
     <fullyQualifiedTypeName name="sun.jvm.hotspot.gc.parallel.PSYoungGen"/>
     <fullyQualifiedTypeName name="sun.jvm.hotspot.tools.SysPropsDumper"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="javaBasic2.ch05.Student1"/>
     <fullyQualifiedTypeName name="sun.security.util.math.intpoly.P256OrderField"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="javaBasic2.ch05.day02.SideDish"/>
+    <fullyQualifiedTypeName name="javaBasic2.ch05.day02.Product"/>
 </qualifiedTypeNameHistroy>
