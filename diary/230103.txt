@@ -1,0 +1,59 @@
+23.01.03.
+
+목표 1. 깃허브
+목표 2. 자바의 구성 및 변수 의미>>교재 활용
+
+1월 목표
+java 교재 1번 보고 코딩해보기
+매일 공부한것 정리해서 노션/git에 올리기
+
+1교시 - 전 날 복습 git 설정 [카페 - git 기초 참조]
+          git config --global user.name 'blah'
+          git config --global user.email 'blah'
+          git config --global --list
+          git init
+          git status
+          git add [file or folder] or [.]
+          git commit -m "blah"
+
+2교시 - git hub 연결 [카페 - 5) github 참조]
+          git hub에 repository 생성, 주소 확인
+          git bash에서 repository 연결(2-4-1) // git remote add origin 주소
+          git remote -v 조회(2-4-2)
+          git push origin master 푸시 (3-2)
+          웹브라우저 메세지에서 sign in >> authorize (3-3) *1회성
+          /end
+          실습)) temp_study에서 markdownbasic.md를 'study' repository에 업로드
+                  local저장소 1)staging 업로드 >> git add
+                                 2)repository 업로드 >> git commit
+                  깃허브 til 연결 끊고, study에 연결
+                  push
+                  /end
+
+3교시 - 실습
+             projectEx폴더를 git이 관리하게 한다 - git init
+             git hub - 본인 이름과 동일한 곳으로 push하기
+             *주의* 드래그앤드랍으로 업로드 하지 말기
+
+
+           질문)) 연결 - [이름] 자리의 origin은 고정인가? yes
+              다만, github의 버전이 바뀌면서 변동될 가능성이 있음
+
+           숙제)) readme.md 작성 후 각 repository 대문 꾸미기
+
+4교시 - java (eclipse)
+
+file-new-other-java project-javabasic1-javaSE11-create module 체크해제-remember체크-no
+src-new-class(중복이름 불가능,첫글자는 대문자)-public static void main 체크-finish
+자주색-키워드(오타나면 에러남)
+검정색-사용자
+
+5교시 - java(카페-java 6페이지 자바 개요)
+JVM
+실습
+
+
+숙제)) 파트1)
+           챕터1) 변수와 타입
+           챕터2) 연산자
+        까지 선행 >> 137페이지를...?

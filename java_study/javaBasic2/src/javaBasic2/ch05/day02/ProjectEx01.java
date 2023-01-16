@@ -36,6 +36,22 @@ public class ProjectEx01 {
 		System.out.println(product2.kind + " " + product2.makeCnt + " " +product2.saleCnt + " " +product2.otherCnt + " " + product2.saleRate);
 		
 		product.bestPickMethod(product, product1, product2) ;
+		if(product.saleRate >= product1.saleRate && product.saleRate>=product2.saleRate) {
+			System.out.println("제일 잘 팔린 반찬은 >" + product.kind);
+		}else if(product1.saleRate >= product.saleRate && product1.saleRate>=product2.saleRate) {
+			System.out.println("제일 잘 팔린 반찬은 >" + product1.kind);
+		}else if(product2.saleRate >= product.saleRate && product2.saleRate>=product1.saleRate) {
+			System.out.println("제일 잘 팔린 반찬은 >" + product2.kind);
+		}
+		
+		product.worstPickMethod(product,product1,product2);
+		if(product.saleRate <= product1.saleRate && product.saleRate<=product2.saleRate) {
+			System.out.println("제일 안 팔린 반찬은 >" + product.kind);
+		}else if(product1.saleRate <= product.saleRate && product1.saleRate<=product2.saleRate) {
+			System.out.println("제일 안 팔린 반찬은 >" + product1.kind);
+		}else if(product2.saleRate <= product.saleRate && product2.saleRate<=product1.saleRate) {
+			System.out.println("제일 안 팔린 반찬은 >" + product2.kind);
+		}
 		
 	}//end main
 
@@ -79,11 +95,13 @@ class SideDish{
 		return saleRate;
 	}
 	String bestPickMethod (SideDish saleRate, SideDish saleRate1, SideDish saleRate2) { 
-		
+
 		
 		return null;
 	}
-	String worstPickMethod (int makeCnt, int saleCnt) {
+	String worstPickMethod (SideDish saleRate, SideDish saleRate1, SideDish saleRate2) {
+
+
 		return null;
 	}
 }
