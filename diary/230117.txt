@@ -1,0 +1,11 @@
+목표
+클래스에 대한 개념을 이해한다
+응용문제 풀어보기
+문자열 처리하기 p.153
+
+1교시 - 전날 복습
+	배열
+2교시 - 클래스 필드 생성 후
+	source - generate getter and setter >>? 이게 뭐지
+	arrayEx02
+3교시 - arrayEx03
