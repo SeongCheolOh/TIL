@@ -32,27 +32,51 @@ public class ArrayEx200p {
 			case "5": flag = false; break;
 			default : System.out.println("입력이 잘못되었습니다 (1~5 중 선택하세요");
 			}
+			
 		}
-	}
 
-	private static void analyze() {
-		// 분석 구하기
+		
+	}//end main
+	
+	private static void cnt() {
+		// 학생수 입력
+		Scanner sc = new Scanner(System.in);
+		System.out.print("학생수 > ");
+		int sutdent = sc.nextInt();
+
+	}
+	private static void input() {
+		// 점수 입력
+		Scanner sc = new Scanner(System.in);
+		int[] score = new int[3];
+		for(int i=0; i<score.length; i++) {
+		System.out.print("["+ i + "]번 학생 점수 > ");
+		int score1 = sc.nextInt();
+		}
 		
 	}
-
 	private static void list() {
 		// 점수 리스트
 		
-	}
-
-	private static void input() {
-		// 점수 입력
 		
 	}
-
-	private static void cnt() {
-		// 학생수 입력
-		
-	}//end main
+	private static void analyze() {
+		// 분석 
+		// 최고 점수
+		int sum = 0;
+		int max = 0;
+		int[] score = {85,95,93};
+		for(int i=0; i<score.length; i++) {
+			sum = sum + score[i];
+			if(max<score[i]) {
+				max = score[i];
+			}else {
+			}
+		}
+		System.out.println("최고 점수 = " + max);	
+		// 평균 점수
+		double avg = (double)sum/score.length;
+		System.out.println("평균 점수 = " + avg);
+	}
 
 }//end class

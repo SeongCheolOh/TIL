@@ -23,6 +23,6 @@
     <fullyQualifiedTypeName name="sun.util.resources.ext.CalendarData_ar"/>
     <fullyQualifiedTypeName name="javaBasic2.ch05.day05.Week"/>
     <fullyQualifiedTypeName name="javaBasic2.ch05.day05.LoginResult"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
