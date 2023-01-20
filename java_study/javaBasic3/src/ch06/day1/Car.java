@@ -1,4 +1,4 @@
-package javaBasic3ch06.day01;
+package ch06.day1;
 
 public class Car {
 
