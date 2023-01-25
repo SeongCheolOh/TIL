@@ -14,7 +14,6 @@
     <fullyQualifiedTypeName name="javaBasic2.ch05.day02.Product"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="javaBasic2.ch05.day03.Student"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="javaBasic2.ch05.day03.Person"/>
     <fullyQualifiedTypeName name="javaBasic2.ch05.day04.ArrayEx02.Hospital"/>
     <fullyQualifiedTypeName name="javaBasic2.ch05.day04.Movie"/>
@@ -34,4 +33,6 @@
     <fullyQualifiedTypeName name="a.aa.AA"/>
     <fullyQualifiedTypeName name="b.ba.BA"/>
     <fullyQualifiedTypeName name="singleton.Single"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.String"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
