@@ -35,4 +35,10 @@
     <fullyQualifiedTypeName name="singleton.Single"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.String"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="dao.BookDao"/>
+    <fullyQualifiedTypeName name="javaBasic5.day01.ex13.MemberService"/>
+    <fullyQualifiedTypeName name="javaBasic5.day01.ex13.Member"/>
+    <fullyQualifiedTypeName name="javaBasic5.day01.ex19.Account"/>
+    <fullyQualifiedTypeName name="com.sun.tools.classfile.Opcode.Set"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.gc.shared.OffsetTableContigSpace"/>
 </qualifiedTypeNameHistroy>

@@ -14,7 +14,7 @@ public class StaticEx05 {
 class Car{
 	static int a = 100;
 	int ia;//4순위 필드
-	static {//1순위 static
+	static {//1순위 static 
 		System.out.println("이 곳은 정적 블록");
 		a = 200;
 	}
