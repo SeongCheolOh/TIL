@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javaMid2.p293.Animal"/>
+    <fullyQualifiedTypeName name="javaMid2.p293.Dog"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="javaMid2.p301.AA"/>
+    <fullyQualifiedTypeName name="javaMid2.p302.C"/>
+    <fullyQualifiedTypeName name="javaMid2.p302.AB"/>
+    <fullyQualifiedTypeName name="javaMid2.p301.A"/>
+    <fullyQualifiedTypeName name="javaMid2.Practice.Student"/>
+    <fullyQualifiedTypeName name="javaMid2.Practice.Resercher"/>
+    <fullyQualifiedTypeName name="javaMid2.Practice.Person"/>
+</qualifiedTypeNameHistroy>
