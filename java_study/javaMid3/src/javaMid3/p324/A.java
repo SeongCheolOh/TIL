@@ -1,4 +1,4 @@
-package p324;
+package javaMid3.p324;
 
 public abstract class A {
 	int x,y;

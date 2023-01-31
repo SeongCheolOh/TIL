@@ -3,7 +3,7 @@ package javaMid3.p312;
 public class PolymoEx01 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// 다형성
 		
 		int a = 10;
 		double b = a; // 작은데서 큰데로 대입되니 오류x
