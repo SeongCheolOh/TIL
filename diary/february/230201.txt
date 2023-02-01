@@ -1,0 +1,50 @@
+1,2교시 - javaMid3 - answer
+
+객체지향프로그램 핵심가치
+1. 단순하게
+2. 중복x
+3. 역할별로 메소드명 동일하게
+
+다형성 개념
+
+1. 기본 설계
+	1) 메인메소드가 있는 클래스
+		역할 - 메뉴 나오게
+		비즈니스 클래스 객체생성해서 필요한 메소드 호출
+		비지니스 클래스를 배열로 만들어 각 지사 입력될때마다 넣기
+	2) 비지니스 클래스
+		매출현황 구하기
+		입력하기(제품명,판매량)
+		출력하기
+	3) 부모클래스
+		지사명, 제품명, 제품가격, 판매량, 매출현황
+	4) 자식클래스
+		toString() 재정의 - 참조변수를 출력하면 지사명 나오게
+2. 상세설계
+	1)SaleMain.java
+		while사용해서 메뉴 나오게
+	2)SaleBusiness.java
+		saleStatusMethod(){}
+		input(){}
+		output(){}
+	3)Jisa.java
+		jisaName, proName, proPrice, saleAmount, saleStatus
+	4)SeoulJisa, KyJisa, KwJisa, JejuJisa
+		toString재정의
+
+3,4교시 - 성적표, 상속 예제
+	naver cafe - 자바 - 인터페이스
+	인터페이스에다
+		역할 명시함
+		추상메소드 int a();
+	구현클래스
+		역할 실제로 내용 작성
+		int a(){};
+	객체생성은 구현클래스를 해야한다
+	인터페이스에 
+	1. 주로 넣는것은 추상메소드
+	2. 상수
+	3. default
+	4. static
+	5. private
+5교시 - html, vscode 확장프로그램 설치

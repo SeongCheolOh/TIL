@@ -10,7 +10,7 @@ public class Product {
 		
 	}
 	
-	public Product(String name) {
+/*	public Product(String name) {
 		this.name = name;
 	}
 	public Product(int price) {
@@ -18,5 +18,5 @@ public class Product {
 	}
 	public Product(int sellCnt) {
 		this.sellCnt = sellCnt;
-	}
+	}  */
 }

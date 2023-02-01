@@ -2,7 +2,7 @@ package example;
 
 public class Comp extends Product{
 	public Comp() {
-		super(200);
+//		super(200);
 	}
 
 }
