@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javaBasic2.ch05.day04.ArrayEx02.Hospital"/>
-    <fullyQualifiedTypeName name="javaBasic2.ch05.day04.Movie"/>
-    <fullyQualifiedTypeName name="java.util.Calendar"/>
-    <fullyQualifiedTypeName name="sun.util.resources.ext.CalendarData_ar"/>
-    <fullyQualifiedTypeName name="javaBasic2.ch05.day05.Week"/>
-    <fullyQualifiedTypeName name="javaBasic2.ch05.day05.LoginResult"/>
-    <fullyQualifiedTypeName name="javaBasic3ch06.day01.Book"/>
-    <fullyQualifiedTypeName name="ch06.sec06.exam01.Car"/>
-    <fullyQualifiedTypeName name="ch06.sec08.exam01.Calculator"/>
-    <fullyQualifiedTypeName name="ch06.sec08.exam02.Computer"/>
-    <fullyQualifiedTypeName name="javaBasic4.day01.Student"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="b.B"/>
     <fullyQualifiedTypeName name="a.aa.AA"/>
@@ -49,9 +38,7 @@
     <fullyQualifiedTypeName name="example.Comp"/>
     <fullyQualifiedTypeName name="example.Location"/>
     <fullyQualifiedTypeName name="example.Product"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="answer.SaleBusiness"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="javaMid4.AImpl"/>
     <fullyQualifiedTypeName name="javaMid4.DDImpl"/>
@@ -60,4 +47,17 @@
     <fullyQualifiedTypeName name="javaMid4.p368.B"/>
     <fullyQualifiedTypeName name="javaMid4.p368.C"/>
     <fullyQualifiedTypeName name="javaMid4.p368.E"/>
+    <fullyQualifiedTypeName name="java.lang.Package"/>
+    <fullyQualifiedTypeName name="javaMid5.ex8.SnowTire"/>
+    <fullyQualifiedTypeName name="javaMid5.ex8.Tire"/>
+    <fullyQualifiedTypeName name="javaMid5.ex11.MainActivity"/>
+    <fullyQualifiedTypeName name="javaMid5.cafe1331.EliStudet"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="javaMid5.cafe1331.SungJukEx"/>
+    <fullyQualifiedTypeName name="javaMid5.cafe1331.SungJukBusiness"/>
+    <fullyQualifiedTypeName name="javaMid5.cafe1331.EliStudent"/>
+    <fullyQualifiedTypeName name="javaMid5.cafe1331.MidStudent"/>
+    <fullyQualifiedTypeName name="javaMid5.cafe1331.HighStudent"/>
+    <fullyQualifiedTypeName name="javaMid5.cafe1331.SungJuk"/>
 </qualifiedTypeNameHistroy>
