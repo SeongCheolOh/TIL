@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="b.B"/>
-    <fullyQualifiedTypeName name="a.aa.AA"/>
-    <fullyQualifiedTypeName name="b.ba.BA"/>
-    <fullyQualifiedTypeName name="singleton.Single"/>
-    <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.String"/>
-    <fullyQualifiedTypeName name="dao.BookDao"/>
-    <fullyQualifiedTypeName name="javaBasic5.day01.ex13.MemberService"/>
-    <fullyQualifiedTypeName name="javaBasic5.day01.ex13.Member"/>
-    <fullyQualifiedTypeName name="javaBasic5.day01.ex19.Account"/>
-    <fullyQualifiedTypeName name="com.sun.tools.classfile.Opcode.Set"/>
-    <fullyQualifiedTypeName name="sun.jvm.hotspot.gc.shared.OffsetTableContigSpace"/>
-    <fullyQualifiedTypeName name="project01.LibraryBook"/>
-    <fullyQualifiedTypeName name="Project01.AddBook"/>
-    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.RETURN"/>
     <fullyQualifiedTypeName name="Project01.LibraryBook"/>
     <fullyQualifiedTypeName name="javaMid2.Practice.ColorPoint"/>
     <fullyQualifiedTypeName name="javaMid2.Practice.BB"/>
@@ -53,11 +38,26 @@
     <fullyQualifiedTypeName name="javaMid5.ex11.MainActivity"/>
     <fullyQualifiedTypeName name="javaMid5.cafe1331.EliStudet"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="javaMid5.cafe1331.SungJukEx"/>
     <fullyQualifiedTypeName name="javaMid5.cafe1331.SungJukBusiness"/>
     <fullyQualifiedTypeName name="javaMid5.cafe1331.EliStudent"/>
     <fullyQualifiedTypeName name="javaMid5.cafe1331.MidStudent"/>
     <fullyQualifiedTypeName name="javaMid5.cafe1331.HighStudent"/>
     <fullyQualifiedTypeName name="javaMid5.cafe1331.SungJuk"/>
+    <fullyQualifiedTypeName name="javaMid6.p376.KumhoTire"/>
+    <fullyQualifiedTypeName name="javaMid6.p376.HankookTire"/>
+    <fullyQualifiedTypeName name="javaMid6.p376.Driver"/>
+    <fullyQualifiedTypeName name="javaMid6.p376.Vehicle"/>
+    <fullyQualifiedTypeName name="javaMid6.p376.Bus"/>
+    <fullyQualifiedTypeName name="javaMid6.p376.Taxi"/>
+    <fullyQualifiedTypeName name="javaMid6.p376.Subway"/>
+    <fullyQualifiedTypeName name="java.lang.Readable"/>
+    <fullyQualifiedTypeName name="javaMid6.p376.example5.Remocon"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
+    <fullyQualifiedTypeName name="javaMid6.p376.example6.Soundable"/>
+    <fullyQualifiedTypeName name="javaMid6.p376.example8.A"/>
+    <fullyQualifiedTypeName name="javaMid6.p395.OutterA"/>
+    <fullyQualifiedTypeName name="javaMid6.p395.OutterA.InnerA"/>
+    <fullyQualifiedTypeName name="javaMid6.p395.example.OA1"/>
 </qualifiedTypeNameHistroy>
