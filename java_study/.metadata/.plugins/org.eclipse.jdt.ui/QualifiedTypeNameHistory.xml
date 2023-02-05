@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="Project01.LibraryBook"/>
-    <fullyQualifiedTypeName name="javaMid2.Practice.ColorPoint"/>
-    <fullyQualifiedTypeName name="javaMid2.Practice.BB"/>
     <fullyQualifiedTypeName name="javaMid2.Practice.A"/>
     <fullyQualifiedTypeName name="javaMid2.Practice.C"/>
     <fullyQualifiedTypeName name="javaMid2.Practice4.Dropship"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="javaMid6.p395.OutterA"/>
     <fullyQualifiedTypeName name="javaMid6.p395.OutterA.InnerA"/>
     <fullyQualifiedTypeName name="javaMid6.p395.example.OA1"/>
+    <fullyQualifiedTypeName name="ch07.sec03.SmartPhone"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="ch07.sec04.exam01.Calculator"/>
 </qualifiedTypeNameHistroy>
