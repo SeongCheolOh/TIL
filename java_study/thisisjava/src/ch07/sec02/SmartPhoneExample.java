@@ -1,4 +1,5 @@
-package ch07.sec02;
+package ch07.sec02; // - 클래스 상속
+
 
 public class SmartPhoneExample {
 

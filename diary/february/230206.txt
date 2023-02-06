@@ -1,0 +1,17 @@
+1교시 - javaMid7
+
+	중첩클래스
+		1) class A{
+			class B{}
+		}
+		2) class A{
+			static class B{}
+		}
+		3) class A{
+		void method(){
+			class B }
+		}
+
+2교시 - javaMid7 - p.409
+
+3교시 - p.413

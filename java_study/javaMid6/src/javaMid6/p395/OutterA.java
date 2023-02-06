@@ -25,6 +25,7 @@ public class OutterA {
 	//		aMethod();//바깥클래스의 메소드 사용 가능
 			System.out.println("내부클래스 InnerA");
 		}
+
 		public InnerA() {
 			
 		}

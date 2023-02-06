@@ -1,4 +1,4 @@
-package ch07.sec03;
+package ch07.sec03; // 부모생성자 호출
 
 public class SmartPhone extends Phone{
 
