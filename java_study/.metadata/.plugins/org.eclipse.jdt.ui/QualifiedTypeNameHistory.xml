@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javaMid5.ex8.SnowTire"/>
-    <fullyQualifiedTypeName name="javaMid5.ex8.Tire"/>
-    <fullyQualifiedTypeName name="javaMid5.ex11.MainActivity"/>
-    <fullyQualifiedTypeName name="javaMid5.cafe1331.EliStudet"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="javaMid5.cafe1331.SungJukEx"/>
-    <fullyQualifiedTypeName name="javaMid5.cafe1331.SungJukBusiness"/>
-    <fullyQualifiedTypeName name="javaMid5.cafe1331.EliStudent"/>
-    <fullyQualifiedTypeName name="javaMid5.cafe1331.MidStudent"/>
-    <fullyQualifiedTypeName name="javaMid5.cafe1331.HighStudent"/>
-    <fullyQualifiedTypeName name="javaMid5.cafe1331.SungJuk"/>
-    <fullyQualifiedTypeName name="javaMid6.p376.KumhoTire"/>
-    <fullyQualifiedTypeName name="javaMid6.p376.HankookTire"/>
-    <fullyQualifiedTypeName name="javaMid6.p376.Driver"/>
-    <fullyQualifiedTypeName name="javaMid6.p376.Vehicle"/>
-    <fullyQualifiedTypeName name="javaMid6.p376.Bus"/>
-    <fullyQualifiedTypeName name="javaMid6.p376.Taxi"/>
     <fullyQualifiedTypeName name="javaMid6.p376.Subway"/>
     <fullyQualifiedTypeName name="java.lang.Readable"/>
     <fullyQualifiedTypeName name="javaMid6.p376.example5.Remocon"/>
@@ -60,4 +43,21 @@
     <fullyQualifiedTypeName name="ch07.sec10.exam02.Animal"/>
     <fullyQualifiedTypeName name="ch07.sec10.exam02.Dog"/>
     <fullyQualifiedTypeName name="ch07.sec10.exam02.Cat"/>
+    <fullyQualifiedTypeName name="javaMid8.Exec.p422.Exec01"/>
+    <fullyQualifiedTypeName name="javaMid8.Exec.p422.OutterA.InnerA"/>
+    <fullyQualifiedTypeName name="javaMid8.Exec.p422.OutterA.InnerSA"/>
+    <fullyQualifiedTypeName name="javaMid8.Exec.p422.q4.Car"/>
+    <fullyQualifiedTypeName name="javaMid8.Exec.p422.q4.Car.Tire"/>
+    <fullyQualifiedTypeName name="javaMid8.Exec.p422.q4.Car.Engin"/>
+    <fullyQualifiedTypeName name="javaMid8.Exec.p422.q4.Car.Engine"/>
+    <fullyQualifiedTypeName name="javaMid8.Exec.p422.q5.ActionEx"/>
+    <fullyQualifiedTypeName name="javaMid8.Exec.p422.q5.Action"/>
+    <fullyQualifiedTypeName name="javaMid8.Exec.p422.q6.Anonymous"/>
+    <fullyQualifiedTypeName name="javaMid8.Exec.p422.q6.Vehicle"/>
+    <fullyQualifiedTypeName name="javaMid8.Exec.p422.q7.Chatting"/>
+    <fullyQualifiedTypeName name="my_lib.pack1.A"/>
+    <fullyQualifiedTypeName name="my_lib.pack2.B"/>
+    <fullyQualifiedTypeName name="my_module_a.pack1.A"/>
+    <fullyQualifiedTypeName name="pack2.B"/>
+    <fullyQualifiedTypeName name="pack3.C"/>
 </qualifiedTypeNameHistroy>
