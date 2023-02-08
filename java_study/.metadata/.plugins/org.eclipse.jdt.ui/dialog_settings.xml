@@ -95,7 +95,7 @@
 	<section name="JarPackageWizard">
 		<item key="JarPackageWizardPage.EXPORT_CLASS_FILES" value="true"/>
 		<item key="JarPackageWizardPage.EXPORT_OUTPUT_FOLDER" value="false"/>
-		<item key="JarPackageWizardPage.EXPORT_JAVA_FILES" value="false"/>
+		<item key="JarPackageWizardPage.EXPORT_JAVA_FILES" value="true"/>
 		<item key="JarPackageWizardPage.REFACTORINGS" value="false"/>
 		<item key="JarPackageWizardPage.COMPRESS" value="true"/>
 		<item key="JarPackageWizardPage.INCLUDE_DIRECTORY_ENTRIES" value="false"/>
@@ -112,9 +112,14 @@
 		<item key="JarManifestWizardPage.MANIFEST_LOCATION" value=""/>
 		<item key="JarManifestWizardPage.SEAL_JAR" value="false"/>
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="my_module_b/dist/my_module_b.jar"/>
+			<item value="my_module_a/dist/my_module_a.jar"/>
 			<item value="javaMid7\dist\my_lib1.jar"/>
 			<item value="javaMid7/dist/my_lib.jar"/>
 			<item value="my_lib/dist/my_lib.jar"/>
 		</list>
+	</section>
+	<section name="SelfEncapsulateFieldWizard">
+		<item key="GenerateJavadoc" value="false"/>
 	</section>
 </section>
