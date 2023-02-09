@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javaMid7.p394.OutterC"/>
-    <fullyQualifiedTypeName name="InnerD"/>
-    <fullyQualifiedTypeName name="javaMid7.p394.OutterD"/>
-    <fullyQualifiedTypeName name="OkListener"/>
-    <fullyQualifiedTypeName name="javaMid7.p409.Button"/>
-    <fullyQualifiedTypeName name="javax.swing.ButtonModel"/>
-    <fullyQualifiedTypeName name="javaMid7.p409.Button.ClickListener"/>
     <fullyQualifiedTypeName name="CancleListener"/>
     <fullyQualifiedTypeName name="ch07.sec04.exam02.SupersonicAirplane"/>
     <fullyQualifiedTypeName name="ch07.sec06.package1.A"/>
@@ -46,18 +39,25 @@
     <fullyQualifiedTypeName name="pack2.B"/>
     <fullyQualifiedTypeName name="pack3.C"/>
     <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.ArithmeticInstruction"/>
     <fullyQualifiedTypeName name="javaMid10.p469.ExceptionEx6"/>
     <fullyQualifiedTypeName name="javaMid10.p468.A"/>
     <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="javaMid10.p470.B"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="javaMid10.p480.InsufficientException"/>
     <fullyQualifiedTypeName name="javaMid10.p480.Account"/>
     <fullyQualifiedTypeName name="javaMid10.toeic.Toeic"/>
     <fullyQualifiedTypeName name="javaMid10.toeic.InsufficientException"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="javaMid11.q7.NotExitIDException"/>
+    <fullyQualifiedTypeName name="javaMid11.q7.WrongPasswordException"/>
+    <fullyQualifiedTypeName name="com.sun.tools.classfile.Annotation.element_value"/>
+    <fullyQualifiedTypeName name="javaMid11.q8.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
 </qualifiedTypeNameHistroy>
