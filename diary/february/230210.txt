@@ -1,0 +1,18 @@
+1교시 - 
+자료구조
+	순차파일 - 순서대로 파일 가져오기(Sequantial Access File(SAM))
+	색인순차파일 - Index SAM(ISAM)
+	자료검색할 때 색인으로 찾기때문에 빠름
+	직접파일 - Direct Access File(DAM)
+	원하는 자료를 한번만으로 검색할 수 있는 것
+	적은 용량으로 검색 속도를 높이는 용도
+
+프로젝트
+	요구사항에 따라 어떤 자료구조를 선택할지 생각
+	만들어놓은 자료구조(컬렉션) List, Set, Map
+
+2, 3교시 - javaHeight02.practice까지
+
+4교시 - 벡터
+
+5교시 - html
