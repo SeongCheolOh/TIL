@@ -28,7 +28,8 @@ public class SetEx02 {
 		System.out.println(set2.size());
 		
 		//4. "참외"가 있는지 검색하기
-		System.out.println(set2.contains("참외"));
+		if(set2.contains("참외"))System.out.println("참외 있습니다");
+		else System.out.println("참외 없습니다");
 	}
 
 }
