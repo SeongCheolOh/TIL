@@ -1,0 +1,23 @@
+1,2교시 - javaHeight04.p659
+
+3교시 - 	List
+	Map - 인터페이스
+	HashMap - 
+	HashTable - 스레드
+	Properties<String, String> - 키와 값의 형태가 String으로 미리 정의된 형태
+				용도와 환경설정을 담고있다
+	TreeMap
+
+	p.662 Properties
+	p.664 TreeSet 노드 개념 잡기
+
+4교시 - 	TreeSet 진행중
+	tree	장점 - 정렬, 검색이 빠르고 편하다
+		단점 - 처음 tree만들 때 오래 걸림
+			주소 기억해줘야한다(주소 공간 필요)
+			삭제, 추가 작업이 빈번하게 발생하는 자료구조에서 비효율적
+
+5교시 - css
+
+숙제 - 	iterator 개념 잡기
+	해시코드 - 오버라이드
