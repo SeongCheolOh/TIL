@@ -1,0 +1,36 @@
+.header {
+  color: red;
+}
+h2 {
+  color: green;
+}
+#font1 {
+  font-family: 궁서체;
+  font-style: oblique;
+  font-size: x-small;
+  font-weight: normal;
+}
+
+h3 {
+  text-align: right;
+}
+
+a:link {
+  color: blue;
+  text-decoration: none;
+  font-size: large;
+}
+
+a:visited {
+  color: rgb(255, 50, 100);
+  font-size: xx-large;
+}
+a:hover {
+  color: rgba(100, 30, 80, 0.5);
+  font-size: xx-large;
+}
+
+a:active {
+  color: aqua;
+  font-size: medium;
+}

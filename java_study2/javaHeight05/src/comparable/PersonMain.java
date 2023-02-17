@@ -1,9 +1,9 @@
-package javaHeight05;
+package comparable;
 
 import java.util.Iterator;
 import java.util.TreeSet;
 
-public class ComparableEx01 {
+public class PersonMain {
 
 	public static void main(String[] args) {
 		
