@@ -1,3 +1,10 @@
+body {
+  background-color: burlywood;
+  background-image: url(../img/selector.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: scroll;
+}
 .header {
   color: red;
 }
