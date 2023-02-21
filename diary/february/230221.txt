@@ -1,0 +1,55 @@
+1교시 - chapter12 p.492~
+	많이 사용하는 클래스들 모아둔 장
+	앞쪽은 java 버전이 달라서 집에서 실습해보란다
+	p.510 lombok - 어노테이션	
+	시스템 - 윈도우 기능 이용하는 것
+	운영체제(operating system >> os)
+		하드웨어와 소프트웨어 사이
+		소프트웨어를 잘 실행해줄 수 있도록
+		하드웨어를 서포트하는 소프트웨어
+		ex) 윈도우, 맥, 리눅스, 유닉스, android, ios 등
+	process exit 프로그램(프로세스) 종료 [중요]
+		System.exit()
+		프로세스는 cpu안에서 실행중인 프로그램
+
+2교시 - p.512~
+	프로그램 실행시간 구하기
+	p.518~ system.getproperty();
+	1. Object 클래스
+		모든 객체의 부모다
+		동등 객체
+		hashcode() equals() toString()
+	2. System 클래스
+		윈도우의 도움 요청
+		종료 System.exit(0)
+		시스템의 날짜 System.nanoTime();
+				System.currentTimeMills()
+		키보드 입력 System.in.read()
+		화면 출력 System.Out.println()
+		에러 출력 System.err.println()
+		사용하는 드라이브는?
+			System.getProperty("user.name");
+
+3교시 - p.519문자열 클래스
+
+4교시 - 포장클래스 ~p.528
+
+숙제--------개념 잡기
+	iterator 
+	해시코드 - 오버라이드
+	다형성
+	while(~~~.hasNext()){
+		~~~.next();
+	향상된 for
+	impliments
+	오버라이드 - compareTo
+	.last
+	.parseInt(); >> 문자열을 숫자로 바꿔주는
+예제 - 12장
+
+	100 이하의 양의 정수만 입력받아서
+	1~입력받은 정수까지의 합 구하기
+	
+	국어 영어 수학 과학 점수를 입력받아 배열리스트에 저장하고
+	총점 평균 구하기
+>>arraylist 공부 필수
