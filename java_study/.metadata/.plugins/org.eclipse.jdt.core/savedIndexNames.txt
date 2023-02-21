@@ -1,7 +1,7 @@
 INDEX VERSION 1.131+C:\webStudyB\study\til\TIL\java_study\.metadata\.plugins\org.eclipse.jdt.core
 4237377453.index
-299273985.index
 921369645.index
+1452561683.index
 3246883038.index
 2472923855.index
 1265074466.index
@@ -20,7 +20,6 @@ INDEX VERSION 1.131+C:\webStudyB\study\til\TIL\java_study\.metadata\.plugins\org
 3886996548.index
 280726569.index
 4191693084.index
-3150783020.index
 753648825.index
 2047244282.index
 399919152.index
