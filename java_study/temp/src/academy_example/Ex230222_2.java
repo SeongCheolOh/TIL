@@ -6,22 +6,22 @@ import java.util.Scanner;
 public class Ex230222_2 {
 
 	public static void main(String[] args) {
-		//êµ­ì–´ ì˜ì–´ ìˆ˜í•™ ê³¼í•™ ì ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„ ë°°ì—´ë¦¬ìŠ¤íŠ¸ì— ì €ì¥í•˜ê³ , ì´ì  í‰ê·  êµ¬í•˜ê¸°
+		//êµ??–´ ?˜?–´ ?ˆ˜?•™ ê³¼í•™ ? ?ˆ˜ë¥? ?…? ¥ë°›ì•„ ë°°ì—´ë¦¬ìŠ¤?Š¸?— ???¥?•˜ê³?, ì´ì  ?‰ê·? êµ¬í•˜ê¸?
 		List<Ex230220_2class> list = new ArrayList<Ex230220_2class>();
-		list.add(new Ex230220_2class("êµ­ì–´", 0));
-		list.add(new Ex230220_2class("ì˜ì–´", 0));
-		list.add(new Ex230220_2class("ìˆ˜í•™", 0));
+		list.add(new Ex230220_2class("êµ??–´", 0));
+		list.add(new Ex230220_2class("?˜?–´", 0));
+		list.add(new Ex230220_2class("?ˆ˜?•™", 0));
 		list.add(new Ex230220_2class("ê³¼í•™", 0));
 		
 		int sum = 0;
 		for(int i = 0; i<list.size(); i++) {
 			Scanner sc = new Scanner(System.in);
-			System.out.print(list.get(i).getSubject()+ "ì˜ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” > ");
+			System.out.print(list.get(i).getSubject()+ "?˜ ? ?ˆ˜ë¥? ?…? ¥?•˜?„¸?š” > ");
 			list.get(i).setScore(sc.nextInt());
 			int score = list.get(i).score;
 			sum += score;
-		}System.out.println("ì´ì ì€ = " + sum);
-		System.out.println("í‰ê· ì€ = " +(double)sum/list.size());
+		}System.out.println("ì´ì ?? = " + sum);
+		System.out.println("?‰ê· ì? = " +(double)sum/list.size());
 
 	}//end main
 
