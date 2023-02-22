@@ -7,6 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/my_lib/dist/my_lib.jar"/>
-	<classpathentry kind="lib" path="C:/Users/pc/Desktop/TIL/TIL/java_study/javaMid7/dist/my_lib1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/pc/Desktop/TIL/java_study/javaMid7/dist/my_lib1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
