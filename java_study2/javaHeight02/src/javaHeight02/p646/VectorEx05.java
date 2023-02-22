@@ -18,6 +18,7 @@ public class VectorEx05 {
 		
 		while(it.hasNext()) {
 			Student st = it.next();
+			System.out.println(st);
 		}
 	}
 

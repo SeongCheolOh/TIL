@@ -13,7 +13,8 @@ public class Ex230222_1 {
 			list.add(new Ex230222_1class(i-1));//인덱스는 0번부터라 i-1으로 작성
 			list.get(i-1).setNum(i);//i-1인덱스의 값을 i로 setNum하여 보내고
 			sum += list.get(i-1).getNum();//합산
-		}System.out.println(list.size()+"개의 인덱스 총 합은 "+sum+ "입니다");
+		}System.out.println("인덱스의 갯수 = " + list.size()+"개");
+		System.out.println(list.size()+"개의 인덱스 총 합은 "+sum+ "입니다");
 		
 	}//end main
 		

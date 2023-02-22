@@ -26,7 +26,8 @@ public class StringClass {
 		String data1 = "abc";
 		data1 += "def";
 		data1 += "ghi"; // 데이터가 수정되는 개념이 아닌, "abcdefghi" 객체를 새로 생성하는 것
-		System.out.println(data1);//이전껀 버려지고, 새로운 객체가 계속 생성되는거라 효율 안좋음
+		System.out.println(data1);
+		//이전껀 버려지고(쓰레기 객체가 계속 생김), 새로운 객체가 계속 생성되는거라 효율 안좋음
 		
 		StringBuilder data2 = new StringBuilder("abc");
 		data2.append("def");//객체를 수정(끝에 추가)
