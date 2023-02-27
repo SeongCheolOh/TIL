@@ -6,6 +6,8 @@ import java.util.Date;
 public class DateEx {
 	
 	public static void main(String[]args) {
+		//현재 자기가 속한 달에 날짜만큼 배열을 생성하고
+		//출석할 때 마다 그 날의 인덱스값을 1로 수정하려고 한다
 		LocalDateTime now = LocalDateTime.now();
 		Date date = new Date();
 		int monthSize = now.getDayOfMonth();
