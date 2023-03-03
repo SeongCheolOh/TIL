@@ -43,7 +43,60 @@ body {
 #right {
   font-size: 15px;
   width: 75px;
+  padding-left: ;
 }
 #cartMenu {
   margin-top: 20px;
+}
+#add1 {
+  position: relative;
+  top: 95px;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 1600px;
+  border: #f4f4f4;
+  height: 500px;
+}
+#add2 {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 1600px;
+  background: white;
+  height: 600px;
+}
+#add2 img {
+  position: relative;
+  float: left;
+  left: 460px;
+  top: 150px;
+  padding: 50px;
+}
+#add2 ul li {
+  position: relative;
+  float: left;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  top: 310px;
+  left: -280px;
+  padding: 50px 50px 10px 50px;
+}
+#add2Text2 li {
+  color: rgb(83, 83, 83);
+  position: relative;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  top: 150px;
+  left: -330px;
+  padding: 20px;
+}
+#add3 {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 1600px;
+  border: #f4f4f4;
+  height: 500px;
+  text-align: center;
 }

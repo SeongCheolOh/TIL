@@ -1,0 +1,78 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#menu1 {
+    width: 100%;
+    height: 95px;
+    background-color: black;
+    position: fixed;
+    z-index: 10;
+}
+#menu1 ul {
+    display: inline-block ;
+    margin: 20px ;
+}
+#menu1 ul li {
+    float: left;
+    height: 100%;
+    line-height: 65px;
+    text-align: center;
+    background-color: black;
+    position: relative;
+}
+
+#menu1 ul li a{
+   text-decoration: none;
+   color: white;
+   margin: 0px;
+   padding: 0px; 
+}
+
+#left {
+  width: 90px;  
+}
+
+#right{
+    font-size: 15px;
+    width: 75px;
+    padding-left: ;
+}
+
+#cartMenu{
+    margin-top: -20px;
+    
+}
+#add1{
+   position: relative;
+   top: 95px;
+   margin: 0 auto;
+   overflow: hidden;
+   width: 1600px;
+   border: #F4F4F4;
+   height: 500px; 
+}
+#add2{
+   margin: 0 auto;
+   overflow: hidden;
+   width: 1600px;
+   background: white;
+   height: 600px; 
+}
+#add2 img {
+    position: relative;
+    float:left;
+    left: 460px;
+    top: 150px;
+    padding: 600px;
+}
