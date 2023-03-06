@@ -74,5 +74,103 @@ body{
     float:left;
     left: 460px;
     top: 150px;
-    padding: 600px;
+    padding: 50px;
+}
+#add2 ul li {
+   position: relative;
+   float: left;
+   font-weight: bolder; 
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   top: 315px;
+   left: -280px;
+   padding: 50px 50px 10px 50px;
+}
+#add2Text2 li {
+    color: rgb(83,83,83);
+    position: relative;
+    text-align: center;
+    float: left;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 150px;
+    left: -330px;
+    padding: 20px;
+}
+#add3 {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1600px;
+    border: #F4F4F4;
+    height: 500px;
+    text-align: center;
+}
+#add4{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1600px;
+    background: white;
+    height: 900px;
+    text-align: center;
+}
+#add4 table {
+    position: relative;
+    top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    background-color: #f4f4f4;
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#add4 table tr{
+    height: 50px;
+    width: 200px;
+}
+#add4 table tr td {
+    width: 150px;
+}
+
+#add4TableLeft1 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#add4TableLeft2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#add4TableLeft3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+#add4TableLeft4 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+#add4TableRight1 {
+    font-size: 18px;
+    text-align: right;
+    color: rgb(95,95,95);
+}
+#add4TableRight2 {
+    font-size: 18px;
+    text-align: right;
+    color: rgb(95,95,95);
+}
+#add4TableRight3 {
+    font-size: 18px;
+    text-align: right;
+    color: rgb(95,95,95);
+}
+#add4TableRight4 {
+    font-size: 18px;
+    text-align: right;
+    color: rgb(95,95,95);
 }
