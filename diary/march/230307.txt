@@ -2,3 +2,20 @@
 	bufferEx01
 	
 2교시 - bufferEx02
+
+3교시 - 직렬화 : 객체 -> 스트림
+	역직렬화 :     <-
+	Access - 읽고 쓴다
+		읽는 - 불러오기
+		쓰기 - 읽기, 수정, 삭제, 삽입 전부 가능
+	Student클래스
+	serialVersionUID 안붙이면 자동으로 생성
+
+4교시 - 18장 마무리, 확인문제
+
+5교시 - js(노드 설치)
+	path설정
+	vscode >> 터미널 실행 >> node --version
+	npm install test
+
+시험 - ncs 요구사항 확인
