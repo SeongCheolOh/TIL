@@ -1,3 +1,22 @@
+1교시 - node 설치, 실행
+	cmd - c - ... - react~
+	node --version
+	npx create-react-app ~프로젝트명~ 
+	dir(완성된거 체크)
+	cd ~폴더명~(해당 폴더로 이동) 후 또 dir
+	npm strat(실행)
+	--------리액트 구조
+	1. index.js가 시작
+
+	basic.js
+
+2교시 - basic.js
+3,4교시 - basic2.js
+5교시 - basic3.js
 ------------------------
+숙제 -
+nodejs 설치 후 환경변수 path 설정
+
+
 HomeStudy
 4장부터
