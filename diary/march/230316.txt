@@ -1,0 +1,16 @@
+1교시 - 복습
+
+2교시 - 모던js p.64 삼항연산자
+
+3,4,5교시 - ch03
+div
+  table
+    tr
+      td
+      td
+    /tr
+  /table
+/dib
+-----------homework;
+java_5.9부터
+nodejs 설치 후 환경변수 path 설정
