@@ -4,7 +4,7 @@
 
 const arr1 = [1,2];
 console.log( arr1 );
-console.log( ...arr1 ); //내부요소를 순차적으로 전개할 수 있다. 
+console.log( ...arr1 ); //내부요소를 순차적으로 전개할 수 있다. 1,2
 
 const obj1 = {
     name: "홍길동",
