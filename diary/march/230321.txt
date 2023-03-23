@@ -1,0 +1,30 @@
+1교시 - 복습 p.137까지
+
+1.props - 상위컴포넌트 App.jsx
+           하위컴포넌트 PropsEx.jsx
+2.useState
+ [ 변수명 , 함수명  ]   = useState(초기값);
+ [ num, setNum ] = useState(0);//배열분할대입
+ num = 0;
+ setNum( num + 1);
+ 함수가 수행될때마다 자동으로 랜더링이 된다.
+3.useEffect( 함수, [ 변수명 ] ) - 특정 변수가 변할 때만 앞에 있는 함수를 수행하시오.
+
+  리액트 생명주기에서 생성될때, 업데이트될때 재랜더링이 자동으로 된다
+  그래서 화면이 늦게 켜지는 현상/깜빡이는 현상 발생한다. 
+
+  useEffect( 함수, [ count ] ) ; 
+  useEffect( 함수, [] ) ; - 처음에 생성될 때 1번만 함수를 수행하시오
+
+4. css 스타일 적용하기
+   1) node-sass 모듈 설치한다
+      npm install node-sass@8.0.0
+
+    구글 검색 node-sass docs
+
+   2) Styled jsx 모듈 설치
+      npm install styled-jsx 
+
+npm install @emotion/react @emotion/styled 
+
+	5.3장
