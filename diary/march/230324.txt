@@ -1,0 +1,15 @@
+1교시
+
+자바 길벗 출판사
+https://books.google.co.kr/books?id=_CuxDwAAQBAJ&pg=PT666&lpg=PT666&dq=%3CRoute+path%3D%22/:category?%22+element%3D%7B%3CNewsPage/%3E%7D+/%3E&source=bl&ots=78gsWWrkfe&sig=ACfU3U3XMP9HFjGoLB0nv4VA6MTqiW9jGA&hl=ko&sa=X&ved=2ahUKEwjT9cugnZX2AhXnhlYBHQqdAOQQ6AF6BAgxEAM#v=onepage&q&f=false
+wikidocs.net - 점프 투 스트링, 스프링 mvc 하루만에 배우기
+
+노드js 마무리
+
+2교시 - 화면설계
+
+3,4 교시 - 화면설계 시험
+	목업
+	1.9번문제 - 로그인 화면을 그림으로
+	2.html이나 css로 구현하기
+	3.화면캡쳐, 코드붙이기
