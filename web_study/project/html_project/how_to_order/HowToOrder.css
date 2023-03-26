@@ -1,0 +1,40 @@
+* {
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+body {
+  margin: auto;
+  text-align: center;
+}
+#wrap .head_inner {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 110px;
+  background-color: beige;
+  position: fixed;
+}
+#wrap .head_inner ul {
+  display: inline-block;
+}
+#text {
+  padding-left: 50px;
+}
+#first {
+  padding-top: 110px;
+}
+#first ul li {
+  list-style: none;
+  text-align: left;
+  /*이미지 위에 글씨 올리는 방법*/
+}
+#second ul li {
+  list-style: none;
+}
+#third {
+  display: inline-block;
+  /*이미지랑 글씨랑 붙여쓰기*/
+}
+#third ul li {
+  list-style: none;
+}
