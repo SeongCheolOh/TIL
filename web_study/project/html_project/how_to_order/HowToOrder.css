@@ -20,21 +20,31 @@ body {
 #text {
   padding-left: 50px;
 }
-#first {
+.HowToOrder {
   padding-top: 110px;
 }
-#first ul li {
+.HowToOrder-img {
+  margin-left: -590px;
+}
+.HowToOrder-text {
+  position: absolute;
+}
+.HowToOrder ul li {
   list-style: none;
   text-align: left;
-  /*이미지 위에 글씨 올리는 방법*/
+  color: white;
 }
-#second ul li {
+.FirstVisitGongcha-text ul li {
   list-style: none;
 }
-#third {
-  display: inline-block;
-  /*이미지랑 글씨랑 붙여쓰기*/
+
+.step1-text {
+  position: absolute;
+  float: left; /*왼쪽 정렬 필요*/
 }
-#third ul li {
+.step1-text ul li {
   list-style: none;
 }
+.step2 ul li {
+  list-style: none;
+} /*미구현*/
