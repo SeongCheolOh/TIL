@@ -21,8 +21,8 @@ insert into course values (20,'모바일','성윤정');
 insert into course values (30,'윈도우','황연주');
 insert into course values (40,'웹표준','전혜영');
 
-insert into student value(101, '문종헌', 24,'moon@naver.com',10,'M');
-insert into student value(102, '오한솔', 22,'fiveone@naver.com',40,'M');
+insert into student values(101, '문종헌', 24,'moon@naver.com',10,'M');
+insert into student values(102, '오한솔', 22,'fiveone@naver.com',40,'M');
 INSERT INTO STUDENT VALUES(103,'제용석', 22,'again@nate.com',20,'M');
 INSERT INTO STUDENT VALUES(104,'정국철', 22,'cook@nate.com',20,'M');
 INSERT INTO STUDENT VALUES(105,'박홍진', 24,'red@nate.com',10,'M');
@@ -89,10 +89,26 @@ create table emp(
     primary key(empno),
     foreign key(deptno) references dept(deptno)
 );
---데이터 삽입
-insert into dept(deptno,dname,loc)
+insert into dept values(deptno,dname,loc)
     values(10,'경리부','서울');
-insert into dept(dname, loc,deptno)
+insert into dept values(dname, loc,deptno)
     values('인사부','인천',20);
-insert into dept values(30,'영업부','용인); 
---dept(dname,loc,deptno 컬럼구조 순서대로 들어감)
+insert into dept values(30,'영업부','용인'); 
+insert into dept values(40,'전산부','수원');
+
+INSERT INTO  emp ( empno, ename,  job, mgr, hiredate, sal, comm, deptno )
+    VALUES (1001, '김사랑', '사원', 1013, '2007/03/10',  300, 0,20);   
+INSERT INTO  emp ( empno, ename,  job, mgr, hiredate, sal, comm, deptno )
+    VALUES (1002, '한예슬', '대리', 1005, '2007/04/02',  250, 6,30);                       
+INSERT INTO  emp ( empno, ename,  job, mgr, hiredate, sal, comm, deptno )
+    VALUES (1003, '오지호', '과장', 1005, '2005/02/10',  500, 100,30);                     
+INSERT INTO  emp ( empno, ename,  job, mgr, hiredate, sal, comm, deptno )
+ VALUES (1004, '이병헌', '부장', 1008, '2003/09/02',  600, 0,20);         
+INSERT INTO  emp ( empno, ename,  job, mgr, hiredate, sal, comm, deptno )
+    VALUES (1005, '신동엽', '과장', 1005, '2005/04/07',  450, 200,30);   
+INSERT INTO  emp ( empno, ename,  job, mgr, hiredate, sal, comm, deptno )
+    VALUES (1006, '장동건', '부장', 1008, '2004/01/08',  520, 0,20);                         
+INSERT INTO  emp ( empno, ename,  job, mgr, hiredate, sal, comm, deptno )
+    VALUES (1007, '김우성', '차장', 1008, '2005/03/08',  500, 0,30);                    
+INSERT INTO  emp ( empno, ename,  job, mgr, hiredate, sal, comm, deptno )
+    VALUES (1008, '안성기', '사장', 0, '1996/04/07',  1000, 0,30);

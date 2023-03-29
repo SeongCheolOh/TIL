@@ -38,3 +38,5 @@ insert into 테이블명
 delete from 테이블명 where 지울컬럼명 = '지울실제데이터';
 -- 수정하기 형식
 update 테이블명 set 컬럼명 = 변경할새로운자료 where 변경할컬럼명 = 찾을자료;
+
+tester1DB230328.sql
