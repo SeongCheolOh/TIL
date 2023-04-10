@@ -1,7 +1,7 @@
 -- 7장 테이블 구조 생성, 변경, 제거하는 DDL (Database Define Language)-데이터 정의어
 -- 목표 테이블 만들고 수정 삭제
 -- 스키마 ??
-select table_name from user_tables;
+select * from user_tables;
 create table emp01(
    empno number(4),
    ename varchar2(14),
@@ -144,291 +144,342 @@ alter table dept
    drop column tourism;
 -- deptno가 20인 레코드만 검색하기
 select * from dept where deptno = 20;
-------------------------------------
---레코드 삽입할 때 insert 문
---형식 insert into 테이블명 (컬럼명1, 컬럼명2 ...) values ('실제값'...);
---레코드 수정할 때 update문
---형식 update 테이블명 set 컬럼명 = '실제값', ... where 조건절
+
+----------------
+-- 레코드를 삽입할 때 inset문
+-- 형식 insert into 테이블명 (컬럼명1, 컬럼명2 ...) values( '실제값',...);
+-- 레코드를 수정할 때 update문
+-- 형식 update 테이블명 set 컬러명 = '실제값', ... where 조건절 
 select * from emp;
---mgr 1005인 사람의 급여를 50만원 인상
-update emp set sale = sale+50 where mgr= 1005;
---job이 사원 대리인 사람의 보너스를 30만원 인상
-update emp set comm = comm+30 where job in ('사원','대리');
---입사일이 05년 이전인 사람의 급여를 100만원 인상
-update emp set sale = sale+100 where hiredate<='05/01/01';
---평균 급여보다 적게 받은 직원들에게 보너스를 50만원 주세요
-select avg(sale) from emp; -- 평균값 구하는 코드
-update emp set comm=comm +50 where sale< (select avg(sale) from emp);
---부서별로 제일 많이 받는 사람은 급여 100만원씩 삭감하기
-select deptno, max(sale) from emp group by deptno where deptno is not null; -- 불가능
-select  deptno, max(sale)  from emp where deptno is not null group by deptno ; -- 부서별로 제일 많이 받는 사람(부서 없는사람 제외);
-select sale from emp where sale in (select  max(sale)  from emp group by deptno);
-update emp set sale = sale-100 
-where sale in (select  max(sale)  from emp group by deptno);
--- job=사장 이거나 입사일 98/12/31 이전인 사람의 급여 = 급여+평균급여로 수정하기
-select sale,ename,deptno from emp where job='사장' or hiredate<='98/12/31';
-update emp set sale = sale+(select avg(sale)from emp) where job='사장' or hiredate<='98/12/31'; 
-update emp set job='수습' where job is null;
---job= 수습인 사람들을 사원으로 변경
-update emp set job='사원' where job = '수습';
---delete 문
---양식 >> delete from emp where 조건문
+-- mgr 1005인 사람의 급여를 50만원 인상
+update emp set sale = sale+50 where mgr=1005;
+-- job이 사원, 대리인 사람의 보너스를 30만원 인상해 주세요
+update emp set comm = comm + 30 where job in ('사원','대리');
+-- 입사일이 05년 이전이 사람의 급여를 100만원 인상하세요.
+update emp set sale = sale + 100 where hiredate <= '05/01/01';
+-- 평균 급여보다 적게 받은 직원에 대해서 보너스 50만원 지급하세요.
+-- 평균 급여?
+select avg(sale) from emp;
+update emp set comm = comm + 50 where sale <= ( select avg(sale) from emp );
+select * from emp;
+-- 부서별로 제일 많이 받는 사람은 급여 100만원 삭감하기
+-- 1단계 부서별로 제일 많이 받는 사람은?
+select ename, deptno, sale from emp where  sale in ( select  max(sale) from emp group by deptno );
+select sale from emp where  sale in ( select  max(sale) from emp group by deptno );
+update emp
+  set sale = sale - 100
+  where   sale in ( select  max(sale) from emp group by deptno )  ;
+-- job 사장이거나 입사일 98/12/31이전 입사인 사람의 급여 = 급여 + 평균급여 수정하기
+update emp 
+      set sale = sale + ( select avg(sale) from emp )
+      where job='사장' or hiredate <= '98/12/31'; 
+select * from emp;
+-- job 수습인 사람들을 사원 변경하세요.
+update emp set job='사원' where job='수습';
+
+-----------------------
+-- delete문 
+-- delete from emp where 조건문; 
 create table c4emp as select * from emp;
 select * from c4emp;
---급여가 1000만원 이상인 사람 삭제
-delete from c4emp where sale>1000;
---mgr이 1008, 1003인 사람 삭제하기
-delete from c4emp where mgr in(1008, 1003);
---김, 이씨 제외하고 모두 삭제
-delete from c4emp where not(ename like '김%' or ename like '이%');
---보너스가 100만원 이상인 사람 삭제하기
-delete from c4emp where comm>=100;
---부서가 10이거나 20인 사람 삭제하기
-delete from c4emp where deptno in(10,20);
 rollback;
+-- 급여가 1000만원 이상인 사람 삭제하기
+delete from c4emp where sale >= 1000;
+-- MGR이 1008, 1003인 사람 삭제하기
+delete from c4emp where mgr in ( 1008, 1003 );
+-- 김씨, 이씨인 사람을 제외하고 모두 삭제하기
+delete from c4emp where not( ename like '김%' or ename like '이%' );
+-- 보너스가 100만원 이상인 사람 삭제하기
+delete from c4emp where comm >= 100;
+-- deptno가 10, 20인 사람 삭제하기
+delete from c4emp where deptno in ( 10,  20);
 
-insert into emp(deptno) values (40) ; -- 0~100 소숫점x 500
---데이터베이스 딕셔너리를 통하여 제약조건에 대한 구조 보기
+drop table emp;
+create table emp as select * from c4emp;
+
+select * from emp;
+
+update emp set sale = sale + 500 where job='사장';
+commit;
+rollback;
+select * from dept;
+
+insert into emp ( deptno ) values ( 40 ); --  0~100 소숫점 X 500
+
+--- 제약 조건 사용 목적 : 데이터베이스를 사용할 때 데이터의 오류를 방지하기 위해서 
+-- 데이터베이스 딕셔너리를 통하여 제약조건에 대한 컬럼 구조를 보기
 desc user_constraints;
---데이터베이스 딕셔너리를 통하여 제약조건의 조건명, 타입, 테이블명을 선택해서 보기
-select constraint_name, constraint_type from user_constraints;
---전체 제약조건에 관련된 컬럼들 보기
-select * from user_constraints;
+-- 데이터베이스 딕셔너리를 통하여 제약조건의 제약조건명, 제약조건 타입, 테이블명을 보기
+-- 필요한 컬럼들만 선택해서 보기
+select constraint_name, constraint_type, table_name from user_constraints ;
+-- 전체 제약조건에 관련된 컬럼들 보기
+select * from user_constraints ;
+-- contraint_type  P-primary key, R-foreign key, U-unique, C-check 또는 not null
 
---각 제약조건을 만들기 -> 수정 -> 삭제
---만들기 테이블 생성할 때 제약조건을 건다
+-- 각 제약조건을 만들기-> 수정->삭제
+-- 만들기 테이블 생성할 때 제약조건을 만든다. 1)not null
 create table emp03(
-empno number(4) not null,
-ename varchar2(10) not null,
-job varchar2(10),
-deptno number(2));
---제약조건 확인
-select constraint_name, constraint_type, table_name, search_condition from user_constraints where table_name in('EMP03');
-drop table emp03;
---unique 제약 조건
-create table emp03(
-empno number(4) unique,
-ename varchar2(10) unique,
-job varchar2(10),
-deptno number(2));
---삽입하기
---1) 정상적
-insert into emp03 values (1001, '홍길동', '사장', 10);
--- empno 빼고 입력하기
-insert into emp03(ename, job, deptno) values ('이순신', '부사장', 10);
---ename 빼고 입력하기
-insert into emp03(empno, job, deptno) values (1002, '사원', 20);
---확인
-select * from emp03;
---2)에러 >> unique 키는 유일하지 않으면 오류
-
---제약 조건명 (Constraint_name)을 사용자가 정의
---일단 제약조건명 없는상태인걸 확인
-select * from user_constraints where table_name in ('EMP03');
-drop table emp03;--지우고
-create table emp03(
-empno number(4) constraint emp03_empno_uk unique, -- constraint 제약조건명 제약조건
-ename varchar2(10) constraint emp03_ename_uk unique,
-job varchar2(10) constraint emp03_job_nn not null,
-deptno number(2) constraint emp03_deptno_nn_uk not null unique);
-drop table emp03;--지우고
-create table emp03(
-empno number(4) constraint emp03_empno_pk primary key, -- constraint 제약조건명 제약조건
-ename varchar2(10) constraint emp03_ename_uk unique,
-job varchar2(10) constraint emp03_job_nn not null,
-deptno number(2) constraint emp03_deptno_nn_uk not null unique
---방법2)
---constraint emp03_empno_pk primary key(empno)를 여기 써도 된다
+   empno number(4) not null,
+   ename varchar2(10) not null,
+   job varchar2(10),
+   deptno number(2)
 );
---foriegn(참조) key 외래키
---만드는 순서 1) 부모테이블 2) 자식테이블
-drop table emp03; --지우고
---1) 부모테이블
-create table dept03(
-deptno number(4),
-dname varchar2(10),
-loc varchar2(10),
-constraint dept03_deptno_pk primary key(deptno));
---2) 자식테이블
-create table emp03(
-empno number(4),
-ename varchar2(20),
-deptno number(4) constraint emp03_deptno_nn not null
-                                   constraint emp03_deptno_fk references dept03(deptno),
---empno 기본키
-constraint emp03_empno_pk primary key(empno) );
---또는
+select constraint_name, constraint_type, table_name, search_condition
+      from user_constraints
+      where table_name in ('EMP03');
 drop table emp03;
-create table emp03(
-empno number(4),
-ename varchar2(20),
-deptno number(4) constraint emp03_deptno_nn not null,
-foreign key(deptno) reference dept03(deptno));--자식테이블
---데이터 딕셔너리를 통해서 제약조건의 내용 보기
-select * from user_constraints where table_name in ('EMP03', 'DEPT03');
---입력할때도 부모 먼저
-insert into dept03 values(10,'경리부', '서울');
-insert into emp03 values(1001, '홍길동', 30); --에러>>부모에 30이 없어서
-insert into emp03 values(1001,'홍길동',10);
 
-drop table dept03;-- 자식테이블에 연결된 데이터가 있으면 자식 먼저 삭제해야 부모테이블도 삭제 가능
-
+-- unique 제약 조건 : null 중복해서 들어 갈 수 있다. 단, 동일한 데이터가 들어가면 안된다. 
 create table emp03(
-empno number(4),
-salary number(10) check(salary between 500 and 5000), -- 제약조건명을 명시하지 않고
-comm number(10) constraint emp03_comm_ck check(comm between 10 and 1000));
+   empno number(4) unique,
+   ename varchar2(10) unique,
+   job varchar2(10),
+   deptno number(2)
+);
+-- 삽입하기
+-- 정상으로 삽입하기
+insert into emp03 values( 1001, '홍길동', '사장', 10); 
+-- empno자료를 입력하지 않고 삽입하기 
+insert into emp03( ename, job, deptno )  values ( '이순신','부사장',10);
+-- ename 입력하지 않고 삽입하기
+insert into emp03( empno, job, deptno) values( 1002, '사원', 20);
+-- 오류나게 삽입하기
+-- 1) empno오류 나게 만들기 데이터 종류가 유일하지 않으면 오류가 남
+insert into emp03 values(1001, '박미주', '부장', 10); -- 오류
+insert into emp03 values(null, '박미주', '부장', 10); -- 정상 null 중복해서 들어가도 된다. 
+insert into emp03 values(1002, '최미주', '부장', 10); -- 오류 
+-- 2) ename오류 나게 만들기
+insert into emp03( ename, job, deptno )  values ( '이순신','부사장',10);
+select * from emp03;
+
+-- 제약 조건명(Constraint_name)을 사용자가 정의하기
 select * from user_constraints where table_name in ('EMP03');
---정상 입력
-insert into emp03 values(1001, 800, 20);
---오류 입력
-insert into emp03 values(1001, 8000, 50);
-insert into emp03 values(1001, 5000, 0);
 
---제약 만들기
---제약 수정, 삭제
+create table emp03(
+   empno number(4) 
+        constraint emp03_empno_uk unique, -- constraint 제약조건명 제약조건, 제약조건명을 만드는 방법 : 테이블명_컬럼명_제약조건약자
+   ename varchar2(10) 
+        constraint emp03_ename_uk unique,
+   job varchar2(10) 
+        constraint emp03_job_nn not null,
+   deptno number(2) 
+       constraint emp03_deptno_nn_uk not null unique
+);
 
---복합키 >> 2개 이상의 컬럼을 합쳐 기본키로 만든 것
---ex)핸드폰번호 뒷4자리 +  이름
+--  primary key 기본키 = not null + unique
 drop table emp03;
 create table emp03(
-ephone number(4),
-ename varchar2(20),
-job varchar2(20),
-constraint emp03_ephone_ename_pk primary key(ephone, ename));
-insert into emp03 values (3334, '홍길동', '사원');
-insert into emp03 values (3334, '이길동', '사원');
-insert into emp03 values (3334, '김길동', '사원');
-insert into emp03 values (3334, '홍길동', '사원');--에러 (프라이머리 키 >> 중복 불가)
-
-drop table emp03;
+   empno number(4) 
+        constraint emp03_empno_pk primary key,
+   ename varchar2(10), 
+   job varchar2(10), 
+   deptno number(2) 
+);
+-- 또는 
 create table emp03(
-empno number(4),
-ename varchar2(20),
-job varchar2(20),
-deptno number(4));
---제약 조건 추가
-alter table emp03
-add constraint emp03_empno_pk_ primary key(empno);
---확인
-select *from user_constraints where table_name in ('EMP03');
---일단 지우고 다시 만듦
-drop table dept03;
+   empno number(4),
+   ename varchar2(10), 
+   job varchar2(10), 
+   deptno number(2),
+   constraint emp03_empno_pk primary key(empno)
+);
+-- 정상입력 2개
+
+-- 오류입력 
+
+-- foreign key 외래키
+drop table emp03;
+-- 만드는 순서 부모테이블 --> 자식테이블
 create table dept03(
-deptno number(4),
-dname varchar2(20),
-loc varchar2(20));
---deptno primary key 제약조건 추가하기
-alter table dept03
-add constraint dept03_deptno_pk primary key(deptno);
---emp03 테이블의 컬럼 deptno를 외래키로 지정하기
-alter table emp03 
-add constraint emp03_deptno_fk foreign key(deptno) references dept03(deptno);
+   deptno number(4),
+   dname varchar2(10),
+   loc varchar2(10),
+   constraint dept03_deptno_pk primary key(deptno)
+); -- 부모 테이블
+create table emp03(
+   empno number(4),
+   ename varchar2(20),
+   deptno number(4) constraint emp03_deptpno_nn not null
+                    constraint emp03_deptno_fk references dept03(deptno),
+   constraint emp03_empno_pk primary key(empno)
+);
+-- 또는 
+drop table emp03;
+create table emp03(
+   empno number(4),
+   ename varchar2(20),
+   deptno number(4) constraint emp03_deptpno_nn not null,
+   foreign key( deptno ) references dept03(deptno)
+); -- 자식 테이블 
+-- 데이터 딕셔너리를 통해서 제약조건의 내용을 보기
+select * from user_constraints where  table_name in ('EMP03', 'DEPT03');
+-- 입력할 때 부모테이블 먼저 입력하고 자식 테이블 입력하기
+insert into dept03 values( 10, '경리부', '서울');
+insert into emp03 values( 1001, '홍길동', 30 ); -- 에러 발생 why? deptno가 30은 부모테이블에 없으니깐
+insert into emp03 values( 1001, '홍길동', 10 ); 
+
+select * from emp03;
 select * from dept03;
 
---dname loc를 복합키로 제약조건 추가
-alter table dept03
-add constraint dept03_dname_loc_pk primary key(dname, loc);
+-- 부모테이블을 삭제하기
+drop table dept03; -- 에러  자식테이블이 연결되어 있을 경우 부모테이블를 삭제할 수 없다.
 
+-- 자식 테이블 삭제후 부모테이블를 삭제하기
+drop table emp03;
+drop table dept03;
+
+-- check 제약 조건
+-- 입력되는 값을 체크하여 설정된 값 이외의 값이 들어오면 오류
+create table emp03(
+   empno number(4),
+   salary number(10) check(salary between 500 and 5000), -- 제약 조건명을 명시하지 않았으므로 SYS ~~ 기본 제약조건명  
+   comm number(10) constraint emp03_comm_ck check( comm between 10 and 1000) 
+);
+select * from user_constraints where  table_name in ('EMP03');
+-- 정상입력
+insert into emp03 values( 1001, 800, 20);
+-- 오류입력
+insert into emp03 values( 1001, 8000, 50);
+insert into emp03 values( 1001, 5000, 0);
+
+-- 제약 만들기 
+-- 제약 수정, 삭제 
+
+-- 복합키 2개이상 컬럼을 합쳐서 기본키로 만든 것 뎨) 핸드폰 4자리 + 이름
+
+drop table emp03;
+create table emp03(
+   ephone number(4),
+   ename varchar2(20),
+   job varchar2(20),
+   constraint emp03_ephone_ename_pk primary key(ephone, ename)
+);
+insert into emp03 values( 3334, '홍길동', '사원');
+insert into emp03 values( 3334, '이길동', '사원');
+insert into emp03 values( 3344, '홍길동', '사원');
+insert into emp03 values( 3334, '홍길동', '사원'); -- 에러 복합키로 지정했기때문에 동일한 레코드 입력 안됨
+
+-- 제약 조건 추가하기
+drop table emp03;
+create table emp03(
+   empno number(4),
+   ename varchar2(20),
+   job varchar2(20),
+   deptno number(4)
+);
+-- 제약 조건 추가하기
+alter table emp03
+  add constraint emp03_empno_pk primary key(empno);
+
+select * from user_constraints where table_name in ('EMP03');
+-- deptno를 외래키로 지정하기
+-- dept03 테이블 만들기
+create table dept03(
+   deptno number(4),
+   dname varchar2(20),
+   loc varchar2(20)
+);
+-- deptno primary key 제약조건 추가하기
+alter table dept03
+   add constraint dept03_deptno_pk primary key (deptno);
+--emp03테이블의 컬럼deptno를 외래키로 지정하기
+alter table emp03
+   add constraint emp03_deptno_fk foreign key(deptno) references dept03(deptno);
+select * from dept03;
+
+-- dname loc를 복합키로 제약조건 추가하기
+alter table dept03
+   add constraint dept03_dname_loc_pk primary key( dname, loc );
+   
+-- dept03, emp03제거하기
+drop table emp03;
+drop table dept03;
+create table dept03(
+   deptno number(4),
+   dname varchar2(20),
+   loc varchar2(20)
+);
+create table emp03(
+   empno number(4),
+   ename varchar2(20),
+   job varchar2(20),
+   deptno number(4)
+);
+-- dname  not null로 제약 조건을 만들 때는 modify ~ 로 왜냐면? not null로 지정하지 않으면 자동으로 null이 됨
+alter table dept03
+   modify dname constraint dept03_dname_nn not null;
+-- ename  not null로 제약 조건을 변경하기
+alter table emp03
+  modify ename constraint emp03_ename_nn not null;
+  
+-- 제약 조건을 제거하기
+-- dept03.deptno를 기본키로 제약조건 추가하기
+alter table dept03
+   add constraint dept03_deptno_pk primary key(deptno); -- 이미 primary key 있어요???
+-- dept03 제약 조건 정보 보기
+select * from user_constraints where table_name in ('DEPT03');
+-- emp03.empno를 기본키로 제약조건 추가하기
+alter table emp03
+  add constraint emp03_empno_pk primary key(empno);
+alter table dept03
+  drop constraint dept03_dname_loc_pk; -- 방법1) 제약조건명으로 제거하기 add constraint로 추가된 것 삭제하기 
+-- emp03 primary키의 제약조건을 제거하기
+-- 방법2) primary key 라는 것으로 제거하기
+alter table emp03
+  drop primary key;
+select * from user_constraints where table_name in ('EMP03','DEPT03');
+
+-- primary key, forgien key, check의 제약조건을 추가하기 add constraint ~
+-- primary key, forgien key, check의 제약조건을 제거하기 drop constraint ~, drop primary key 
+-- not null 제약 조건은 변경하기 modify constraint  ~
+
+-- cascade 종속
+-- 부모테이블의 자료를 변경하면 자식도 같이 변경이 될 수 있게 제약조건을 만들어 주는 것.
+-- 부모테이블의 자료를 삭제하면 자식도 같이 삭제되라 
 drop table emp03;
 drop table dept03;
 
 create table dept03(
-deptno number(4),
-dname varchar2(20),
-loc varchar2(20));
-create table emp03(
-empno number(4),
-ename varchar2(20),
-job varchar2(20),
-deptno number(4));
---dname not null로 제약조건을 만들 때 modefi~~
---why??>> not null로 지정하지 않으면 자동으로 null되기때문
-alter table dept03
-    modify dname constraint deptno03_dname_nn not null;
---ename not null로 제약 조건을 변경하기
-alter table emp03
-    modify ename constraint emp03_ename_nn not null;
---제약조건 제거 p.143
---dept03.deptno를 기본키로 제약조건 추가
-alter table  deot03_deptno primary key(deptno);
---emp03.empno를 기본키로 제약조건 추가
-alter table dept03
-    drop    constraint dept03_dname_nn_; --방법1) 제약조건명 제거
-
---네이버 카페 1408
-create table employee(
-emp_no number(4),
-emp_name varchar2(20),
-salary number(6),
-birthday date);
-create table project(
-pro_no number(4),
-pro_content varchar2(100),
-start_date date,
-finish_date date);
-create table specialty(
-emp_no number(4),
-specialty varchar2(20));
-create table assign(
-emp_no number(4),
-pro_no number(4));
---primary key 지정
-alter table employee
-add constraint employee_emp_no_pk primary key(emp_no);
-alter table project
-add constraint project_pro_nu_pk primary key(pro_no);
-alter table specialty
-add constraint specialty_emp_no_specialty_pk primary key(emp_no,specialty);
-alter table assign
-add constraint assign_emp_no_pro_no_pk primary key(emp_no, pro_no);
---foreign key 지정
-alter table specialty
-add constraint emp_no_fk foreign key(emp_no) references employee(emp_no);
-alter table assign
-add constraint emp_no_fk foreign key(emp_no) references employee(emp_no);
-alter table assign
-add constraint pro_no_fk foreign key(pro_no) references project(pro_no);
---카페 보고 완성하세요!
---cascade
---부모 테이블의 자료를 변경하면 자식도 같이 변경
---부모 테이블의 자료를 삭제하면 자식도 같이 삭제
---될 수 있게 제약조건을 만들어 주는 것
-drop table emp03;
-drop table dept03;
+   deptno number(2),
+   dname varchar2(10),
+   loc varchar2(10),
+   constraint dept03_deptno primary key(deptno)
+);
 
 create table emp03(
-empno number(4),
-ename varchar2(10)
-    constraint emp03_ename_nn not null,
-job varchar2(10),
-deptno number(2),
-constraint emp03_empno_pk primary key(empno),
-constraint emp03_job_uk unique(job),
-constraint emp03_deptno_fk foreign key(deptno) references dept03(deptno));
+   empno number(4),
+   ename varchar2(10)
+   constraint emp03_ename_nn not null,
+   job varchar2(10),
+   deptno number(2),
+   constraint emp03_empno_pk primary key(deptno),
+   constraint emp03_job_uk unique(job),
+   constraint emp03_deptno_fk foreign key(deptno) references dept03(deptno)
+);
 
-create table dept03(
-deptno number(2),
-dname varchar2(10),
-loc varchar2(10),
-constraint dept03_deptno_pk primary key(deptno));
---제약조건 확인
+
+-- 제약 조건 확인하기
 select * from user_constraints where table_name in ('EMP03', 'DEPT03');
---데이터를 삽입할 때 순서 >> 1)부모 2)자식
-insert into emp03 value(1000, '홍길동', '사원', 50); --에러 발생<<외래키 관계이기 때문에
---에러 없애는 방법 1) 부모 자료 우선으로 입력하기 2) 제약조건을 임시로 비활성화(disable constraint)
-alter table emp03 --비활성화 (비 권장사항)
-    disable constraint emp03_deptno_fk; 
---재활성화
+-- 데이터를 삽입할 때 순서 부모자료->자식자료
+insert into emp03 values(1000, '홍길동','사원', 50); -- 에러 발생 왜? 외래키관계이기 때문에 
+-- 위에 에러를 없애는 방법 1) 부모자료 넣고 자식 자료 넣으면 된다. 2) 제약조건을 임시로 비활성화(disable constraint)하기
 alter table emp03
-    enbale constraint emp03_deptno_fk;
-delete * from emp03;
---cascade 옵션
-alter table dept03
-    disable primary key cascade; 
-alter table dept03
-    enable primary key cascade;
+   disable constraint emp03_deptno_fk; -- 비권장 사항 
+-- 비활성화한 제약조건을 다시 활성화하려면
 alter table emp03
-    enable emp03_deptno_fk;
+   enable constraint emp03_deptno_fk;
+delete  from emp03;
+
+-- cascade 옵션
+alter table dept03
+  disable primary key cascade;
+  
+alter table dept03
+  enable primary key;
+  
+alter table emp03 
+  enable constraint  emp03_deptno_fk;
+  
 select * from user_constraints where table_name in ('EMP03', 'DEPT03');
-insert into emp03 values(1000, '홍길동', '사원', 50);
---카페 1410 Join // ppt p.144
+
+insert into emp03 values( 1000, '홍길동','사원', 50);

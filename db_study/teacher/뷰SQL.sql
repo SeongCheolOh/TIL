@@ -115,19 +115,19 @@ select * from vSal800; -- 검색만 된다.
 -- with check option : where 절의 컬럼을 변경하는 것을 막아주는 것 
 
 create or replace view vDept30 as
-     select * from emp where deptno=30  with check option;
-update  vDept30  set  deptno=50 ;   -- 오류남 왜? with check option
+     select * from emp where deptno=50  with check option;
+update  vDept30  set  deptno=10 ;   -- 오류남 왜? with check option
 delete from vDept30; --  에러없음
 select * from vDept30; -- 검색만 된다.
 
 -- 뷰에서 dml( insert , update, delete) 안되게 하고 싶다. 
 create or replace view vSal18_60 as
-     select * from emp where  sale  between 1800 and 6000  with  check option;
+     select * from emp where  sale  between 500 and 800  with  check option;
 select * from vSal18_60;
 -- update하는데 1800~6000사이 범위를 벗어나게 바꾸기
 update  vSal18_60  set  sale = 8000-sale ; -- 에러
 -- update하는데 1800~6000사이 범위를 벗어나지 않게 바꾸기
-update  vSal18_60  set  sale = sale + 500 ;  -- 정상
+update  vSal18_60  set  sale = sale + 10 ;  -- 정상
 -- update하는데 1800~6000사이 범위를 일부분만 벗어나게 바꾸기 전체다 안됨
 update  vSal18_60  set  sale = sale + 500 ;  -- 전체다 업데이트가 안된다. noting 
 
@@ -147,72 +147,93 @@ rename student to oldStudent;
      
  -- 뷰문제 풀기 1414 부분 보시고 문제 풀어 보세요
  
-------------------13장 시퀀스
-create sequence dept_deptno_seq
+----------------- 13장 시퀀스 개념
+-- 시퀀스 생성하기
+create sequence  dept_deptno_seq
     start with 10
     increment by 10;
---시퀀스 데이터 딕셔너리 보기
-desc user_sequences;--(구조 확인)
+    
+--   시퀀스 데이터 딕셔너리 보기
+desc user_sequences; -- 구조보기
 select * from user_sequences;
---시퀀스 현재 값 >> currval
-select dept_deptno_seq.currval from dual; --처음부터 currval 쓰면 에러
---시퀀스 다음 값 >> nextval
-select dept_deptno_seq.nextval from dual;
---시퀀스 드랍
+
+-- 시퀀스의 현재값 currval
+select dept_deptno_seq.currval  from dual;  -- 처음이것부터 수행하니깐? 에러, nextval 포인트(가르키는 위치)위치 값를 보여준다 
+-- 시퀀스의 다음값 nextval
+select dept_deptno_seq.nextval  from dual;  -- 증가값 만큼 위치를 이동해서 값을 보여준다.
+
+
 drop sequence dept_deptno_seq;
 
---실제 사용 예시
+-- 시퀀스를 실제 테이블에서 어떻게 사용할 까?
 create sequence emp_seq
-    start with 1
-    increment by 1
-    maxvalue 1000;
-create table seqEmp(
-    empno number(4), -- 자동으로 번호 증가되게
-    name varchar2(20), -- 직접 입력
-    beginDate date); -- 오늘 날짜 자동 입력
-    
-insert into seqEmp values(emp_seq.nextval, '홍길동', sysdate);
-insert into seqEmp values(emp_seq.nextval, '김길동', sysdate);
-insert into seqEmp values(emp_seq.nextval, '나길동', sysdate);
-insert into seqEmp values(emp_seq.nextval, '다길동', sysdate);
-insert into seqEmp values(emp_seq.nextval, '라길동', sysdate);
+      start with 1
+      increment by 1 
+      maxvalue 1000;
+      
+create  table seqEmp(
+     empno number(4), -- 자동으로 번호 증가되게
+     name varchar2(20), -- 직접 입력
+     beginDate date -- 자동으로 오늘 날짜가 입력되게
+);
+
+drop table seqEmp;
+
+insert into seqEmp values( emp_seq.nextval,  '홍길동', sysdate) ;
+insert into seqEmp values( emp_seq.nextval,  '홍길동1', sysdate) ;
+insert into seqEmp values( emp_seq.nextval,  '홍길동2', sysdate) ;
+insert into seqEmp values( emp_seq.nextval,  '홍길동3', sysdate) ;
+insert into seqEmp values( emp_seq.nextval,  '홍길동4', sysdate) ;
 select * from seqEmp;
---sequence 수정
+
+-- sequence 수정하기
 alter sequence emp_seq
-    --start with 1001 시작점은 고칠 수 없습니다
-    increment by 10
-    maxvalue 80
-    cycle cache 2;
---데이터 삽입
-insert into seqEmp values(emp_seq.nextval, '홍길동', sysdate);
-insert into seqEmp values(emp_seq.nextval, '김길동', sysdate);
-insert into seqEmp values(emp_seq.nextval, '나길동', sysdate);
-insert into seqEmp values(emp_seq.nextval, '다길동', sysdate);
-insert into seqEmp values(emp_seq.nextval, '라길동', sysdate);
-insert into seqEmp values(emp_seq.nextval, '마길동', sysdate);
-insert into seqEmp values(emp_seq.nextval, '박길동', sysdate);
-insert into seqEmp values(emp_seq.nextval, '신길동', sysdate);
-insert into seqEmp values(emp_seq.nextval, '이길동', sysdate);
-insert into seqEmp values(emp_seq.nextval, '진길동', sysdate);
---자료 검색 시 많이 사용하는 컬럼명은 인덱싱 하는게 데이터 상 도움된다
-create index idx_emp_ename
-    on emp(ename);
-    
-set timing on;
+     increment by 10
+     maxvalue 100
+     cycle
+     cache 2;
+
+insert into seqEmp values( emp_seq.nextval,  '홍길동', sysdate) ;
+insert into seqEmp values( emp_seq.nextval,  '홍길동1', sysdate) ;
+insert into seqEmp values( emp_seq.nextval,  '홍길동2', sysdate) ;
+insert into seqEmp values( emp_seq.nextval,  '홍길동3', sysdate) ;
+insert into seqEmp values( emp_seq.nextval,  '홍길동4', sysdate) ;  
+insert into seqEmp values( emp_seq.nextval,  '홍길동', sysdate) ;
+insert into seqEmp values( emp_seq.nextval,  '홍길동1', sysdate) ;
+insert into seqEmp values( emp_seq.nextval,  '홍길동2', sysdate) ;
+insert into seqEmp values( emp_seq.nextval,  '홍길동3', sysdate) ;
+insert into seqEmp values( emp_seq.nextval,  '홍길동4', sysdate) ;    
+
+select * from seqEmp;
+
+-------- 인덱스 정보
+select * from user_ind_columns; -- 테이블을 만들때 primary key는 자동으로 인덱스 처리됨
+
+-- 이름으로 검색하는 것이 빈번하다 빠르게 검색이 되게 하고 싶다.
+-- 해결책 이름을 인덱스로 만들어 주세요
+create index idx_emp_ename 
+         on  emp(ename);
+         
+set  timing on;
 
 select * from emp;
-select * from emp where job='사원';
-select  * from emp where ename= '김사랑';
---인덱스 제거
+select * from emp where job='사원'; -- 테이블 검색 결과 
+select * from emp where ename='김사랑'; -- 인덱스 검색 결과 
+
+-- 인덱스 제거하기
 drop index idx_emp_ename;
---인덱스를 사용하는 경우
---테이블의 행 갯수가 많을 때
+
+---- 인덱스를 해야하는 경우
+--테이블에 행의 수가 많을 때
 --where문에 해당 컬럼이 많이 사용될 때
---검색 결과가 전체데이터의 2~4%정도일 때
+--검색결과가 전체 데이터의 2%~4%정도일 때
 --join에 자주 사용되는 컬럼이나 null을 포함하는 컬럼이 많은 경우
 
---인덱스 사용하지 않는 경우
---테이블 행 갯수 적을 때
---where문 해당 컬럼이 적게 사용될 때
---검색 결과가 전체 데이터의 10% 이상일 때
---테이블에 DML(insert, update, delete)작업이 많을 때
+-- 인덱스하면 안 좋은 경우
+--테이블에 행의 수가 적을 때
+--where문에 해당 컬럼이 적게 사용될 때
+--검색결과가 전체데이터의 10%~15%정도일때
+--테이블에 DML(insert, update, delete)작업이 많을 때 
+
+
+

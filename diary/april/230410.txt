@@ -1,0 +1,73 @@
+1교시 - 15장 p.216
+
+2교시 - 16장... 휴 오늘 어렵네
+
+3교시 - 구글 - sts3 다운로드 - https://docs.spring.io/sts/nan/v3915/NewAndNoteworthy.html
+https://download.springsource.com/release/STS/3.9.18.RELEASE/dist/e4.21/spring-tool-suite-3.9.18.RELEASE-e4.21.0-win32-x86_64.zip
+
+mvc패턴
+역할로 구분
+M - 데이터베이스랑 소통하기 실제 작업하는 부분 
+     - DB, 
+V - 보여주기는 역할 
+C - M과 V사이에서 제어하는 역할
+
+
+https://wikidocs.net/115238
+
+1. mySQL 설치
+https://dev.mysql.com/downloads/windows/installer/8.0.html
+cafe - 데이터베이스 - mySQL 설치
+
+빌드를 관리해주는 도구들 = 스프링으로 코딩을 하면 빌드 도구들이 알아서 실행시켜주는 것
+			연결되는 프레임워크가 많다. 이것들을 관리해주는 도구
+빌드 = 컴파일, 링크, 로더
+메이븐 그래들
+maven, gradle, and
+
+2. 톰캣 - 10버전(which version에서 자바 버전에 따라 호환성이 좋은 버전 확인 가능)
+자바11 + 톰캣10
+서버를 만들어주는 프로그램
+압축만 풀어주고 sts에 연결하면 끝
+
+3. 데이터베이스는 mySQL
+오라클 관리자 - system
+mySQL - root
+
+4. webapp이라는 폴더는
+톰캣 서버가 뷰로 생각해서 처리하는 파일들을 넣어두는 곳
+서버에서 실행될 파일을 넣어두는 곳
+
+5. 로그
+   개발시 콘솔창에 여러가지 상황(정보)을 보여주는 것
+   레벨 1-정보 조금밖에 안보여주는 것
+   레벨 - debug 스프링 프레임워크 작업할 때 나오는  모든 정보를 콘솔창에 다 보여 주는 것
+          개발자들은 debug 셋팅하고 개발한다
+
+6. jsp파일은 
+  html파일처럼 화면을 만들기  + 자바에 준 변수 값을 출력/자바로 값 입력 기능 
+
+   
+예제  /test1
+
+ /testlogin 
+ 로그인 화면입니다 views/test/testlogin.jsp 파일
+ 
+ /testjoin
+ 회원가입화면입니다 views/test/testjoin.jsp 파일
+
+ /testboard
+ 게시판 화면입니다 views/test/testboard.html 파일
+
+GET방식 주소안에 데이터를 넣어서 서버에 전달하는 방식
+ ?name=홍길동
+장점: 빠르다
+단점: 보안에 취약하다
+
+POST방식은 body태그로 데이터 전달 클라이언트 화면에 전달하는 데이터 안보임
+장점 : 보안에 유리하다
+
+7. mySQL workbench 도구
+mySQL 데이터베이스를 사용할 수 있도록 SQL문을 작업할 수 있는 도구
+오라클의 sqldeveloper와 비슷한 용도로 쓴다
+
