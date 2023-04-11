@@ -1,4 +1,4 @@
-package sample.spring.yse;
+package sample.spring.prtc;
 
 import java.util.Map;
 
@@ -10,26 +10,26 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class BookController {
+public class MemberController {
 	
 	@Autowired
-	BookService bookService;
+	MemberService memberService;
 
-	@RequestMapping(value="/create", method = RequestMethod.GET)
-	public ModelAndView create() {
-	    return new ModelAndView("book/create");
+	@RequestMapping(value="/join", method = RequestMethod.GET)
+	// /join 요청하면 "member/join.jsp"뷰로 응답
+	public ModelAndView join() {
+	    return new ModelAndView("member/join");
 	}
 	
-	@RequestMapping(value = "/create", method = RequestMethod.POST)
+	@RequestMapping(value = "/join", method = RequestMethod.POST)
 	public ModelAndView createPost(@RequestParam Map<String, Object> map) {
 	    ModelAndView mav = new ModelAndView();
 
-	    String bookId = this.bookService.create(map);
-	    if (bookId == null) {
-	        mav.setViewName("redirect:/create"); // 재요청하기 /create라고
+	    String memberId = this.memberService.create(map);
+	    if (memberId == null) {
+	        mav.setViewName("redirect:/join");
 	    }else {
-	    	System.out.println("삽입 성공");
-	        mav.setViewName("redirect:/detail?bookId=" + bookId); 
+	        mav.setViewName("redirect:/detail?memberId=" + memberId); 
 	    }  
 
 	    return mav;

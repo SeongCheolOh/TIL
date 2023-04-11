@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>sample.spring</groupId>
-	<artifactId>yse</artifactId>
-	<name>SampleSpringYse</name>
+	<artifactId>prtc</artifactId>
+	<name>Practice</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -115,8 +115,9 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>   
+		</dependency>        
 		
+	<!--  여기 추가된 부분 -->
 		<!-- database -->
 <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 <dependency>
@@ -159,7 +160,9 @@
     <artifactId>mysql-connector-java</artifactId>
     <version>8.0.19</version>
 </dependency>
-		     
+	<!--  여기까지 -->
+		
+		
 	</dependencies>
     <build>
         <plugins>

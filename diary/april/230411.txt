@@ -1,0 +1,113 @@
+이클립스 스프링 전용 STS
+톰캣? 서버역할을 해주는 프로그램
+      설치한 컴퓨터가 서버로 만듬
+localhost 또는 127.0.0.1 : 자신 컴퓨터
+원격컴퓨터 연결하고 싶으면 localhost대신에 원격 포트번호 써주면됨
+톰캣의 기본포트는 8080 인데 로컬컴퓨터에서 오라클(8080포토)이 설치되어 있는 경우
+포트가 동일하기 때문에 오류가 난다.
+그래서 톰캣 포트를 8000~9999까지 임의 숫자로 변경할 수 있다. 중복 존재하면 안됨
+
+
+  ~~ 어떻게 셋팅하겠다  셋팅내용
+  위에 셋팅을 어디에 적용하겠다. 적용대상
+
+  실행     .exe
+  클래스  .class
+  서블릿  .java -  자바코드안에 html을 넣어 준 서버프로그램
+   JSP     .jsp - html안에 자바코드를 넣어 준 서버 프로그램
+
+jsp의 실행 단계 
+  JSP     .jsp  --> 서블릿  .java --> 클래스  .class -->   실행     .exe
+
+용도 
+디버깅할 때 중간 중간 단계를 출력해 볼 때 사용한다.
+System.out.println( ) -- 자바에서 콘솔 출력 
+console.log( ) - 자바스크립에서 콘솔 출력
+log4j -- 스프링     ALL < DEBUG < INFO < WARN < ERROR < FATAL < OFF
+
+테이블 더 만들기
+1) member table
+   id 자동증가 기본키 
+   password  varchar(30) nn
+   name varchar(100)  nn
+   email varchar(100)  
+   phone varchar(100)
+   joindate datetime  now()
+
+2) board table
+   no 자동증가 기본키
+   writer varchar(100) nn -- 작성자
+   title varchar(100) nn - 게시글 제목
+   content varchar(500) nn -- 게시글 내용
+   date  datetime  now() -- 게시글 날짜
+   
+연습1)회원관리 테이블만들고 MemberController
+      회원가입 입력, 수정, 삭제
+연습2)게시판 테이블만들고 BoardController
+      게시판 입력, 수정, 삭제
+
+데이터베이스란 연결하는 단계
+1. 해당 데이터베이스 드라이버를 로딩한다
+   Class.forName()
+2. DriverManager로 연결한다.
+3. SQL문을 만들어서 보낸다
+4. 결과를 받아 온다. ResultSet
+
+스프링 -- 마이바티스 -- mysql 
+1단계  pom.xml파일 DI해줌
+2단계 root-context.xml 파일로 연결하기
+3단계 sql문을 xml파일로 만들기
+	src/main/resources/ sqlmap/book_SQL.xml
+	insert문 작성
+
+pom.xml파일안에
+ <dependency> 태그 추가하고
+maven build하기 
+
+
+의존성 주입하기 (Dependency Injection)  DI = 자동주입
+ : 스프링이 필요한 라이브러리들을  자동으로 넣어 주는 기능
+
+12시 25분까지 쉬기
+
+
+자바 
+
+A 자바 스프링
+    new B(); 
+B 자바
+
+<bean id="dataSource" 
+         class="org.apache.commons.dbc2.BasicDataSource"
+         destroy-method="close">를 자바식으로 표현하면
+
+ BasicDataSource  dataSource =  new BasicDataSource();
+
+<property name ="driverClassName" value="com.mysql.cj.jdbc.Driver"></property> 
+자바식으로 표현하면
+ dataSource.setdriverClassName(  "com.mysql.cj.jdbc.Driver"  ); 
+ -- mySQL 드라이버를 로딩하기 
+
+
+ <bean id="sqlSessionFactory"
+  class="org.mybatis.spring.SqlSessionFactoryBean">
+  <property name="dataSource" ref="dataSource" />
+  <property name="mapperLocations"
+   value="classpath:/sqlmap/**/*_SQL.xml" />
+ </bean>
+
+  // SqlSessionFactoryBean클래스는 마이바티스와 mysql을 연결하는 것 담당
+  SqlSessionFactoryBean  sqlSessionFactory  =   new SqlSessionFactoryBean();
+   sqlSessionFactory.setdataSource( dataSource() );
+   sqlSessionFactory.setmapperLocations(  "classpath:/sqlmap/**/*_SQL.xml" );
+   // SQL문의 위치를 지정함
+
+ <bean id="sqlSessionTemplate"
+  class="org.mybatis.spring.SqlSessionTemplate">
+  <constructor-arg index="0" ref="sqlSessionFactory" />
+ </bean>
+
+마이바티스
+https://mybatis.org/spring/ko/factorybean.html
+
+5교시 - 6-1까지
