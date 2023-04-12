@@ -1,0 +1,28 @@
+1교시 복습
+
+dependency 복사 - 붙여넣기
+https://mvnrepository.com/
+새로운 드라이버(기능)
+jar파일을 스프링으로 연결하려면 dependency
+
+2교시 - 스프링구조 bean 컨테이너
+스프링 컨테이너는 자바 객체의 생명 주기를 관리하며, 
+생성된 자바 객체들에게 추가적인 기능을 제공하는 역할을 합니다. 
+여기서 말하는 자바 객체를 스프링에서는 빈(Bean)이라고 부릅니다. 
+그리고 저번 시간에 배웠던 IoC와 DI의 원리가 이 스프링 컨테이너에 적용됩니다.
+
+sqlmap - .xml - insert
+
+3교시 - DAO
+
+Service - 비즈니스클래스 (실제로 작동하는 위치)
+컨트롤러와 DAO를 연결하는 역할
+
+mysql날짜와 스프링의 뷰로 보인날짜가 9시간 차이가 났다
+이유는 스프링에서 UTC로 타임존이 설정되어 있어서
+그래서 수정했다. 
+root-context.xml 파일에서
+  serverTimezone=UTC  (X)---> serverTimezone=Asia/Seoul (0)
+
+  <property name="url"
+   value="jdbc:mysql://localhost:3306/yse_spring_mvc?serverTimezone=Asia/Seoul

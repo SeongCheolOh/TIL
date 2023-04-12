@@ -16,5 +16,11 @@ public class BookDAO {//저장소 역할을 하는 클래스
 	//메소드 삽입에 관련 역할을 하는 메소드 insert - (username)
 	public int insert ( Map<String, Object> map) {
 		return this.sqlSessionTemplate.insert("book.insert", map);
+		
+	}
+	
+	//책 상세 DAO메소드
+	public Map<String, Object> selectDetail ( Map<String, Object>map ) {
+		return this.sqlSessionTemplate.selectOne("book.select_detail", map);
 	}
 }
