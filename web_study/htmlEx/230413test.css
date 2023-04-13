@@ -1,0 +1,35 @@
+label,
+select {
+  margin-bottom: 10px;
+}
+input,
+select {
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+textarea {
+  height: 100px;
+}
+#submit-button {
+  background-color: #007bff;
+}
+#cancel-button {
+  background-color: #6c757d;
+}
+#error-message {
+  color: red;
+  margin-top: 10px;
+}

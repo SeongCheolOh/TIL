@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="230413test.css" />
+  </head>
+  <body>
+    <form id="signup-form">
+      <label>성</label>
+      <input type="text" id="last-name-input" /> <br />
+      <label>이름</label>
+      <input type="text" id="first-name-input" /> <br />
+      <label>이메일</label>
+      <input type="email" id="email-input" />
+      <br />
+      <label>성별</label>
+      <input type="radio" name="gender" value="male" id="male-radio" />
+      <label for="male-radio">남성</label>
+      <input type="radio" name="gender" value="female" id="female-radio" />
+      <label for="female-radio">여성</label>
+      <br />
+      <label>특기</label>
+      <input type="checkbox" name="skill" value="html" id="html-checkbox" />
+      <label for="html-checkbox">HTML</label>
+      <input type="checkbox" name="skill" value="css" id="css-checkbox" />
+      <label for="css-checkbox">CSS</label>
+      <input type="checkbox" name="skill" value="java" id="java-checkbox" />
+      <label for="java-checkbox">Java</label>
+      <input type="checkbox" name="skill" value="mysql" id="mysql-checkbox" />
+      <label for="mysql-checkbox">MySQL</label>
+      <br />
+      <label>전공</label>
+      <select id="major-select" name="major">
+        <option value="computer">Computer</option>
+        <option value="AI">AI</option>
+        <option value="design">Design</option>
+        <option value="art">Art</option>
+      </select>
+      <br />
+      <label>생일</label>
+      <input type="date" name="birthday" />
+      <br />
+      <textarea id="message-input" placeholder="하고 싶은 말"></textarea> <br />
+      <button type="submit" id="submit-button">가입하기</button>
+      <button type="button" id="cancel-button">취소하기</button>
+    </form>
+    <div id="error-message"></div>
+    <script>
+      // 자바스크립트 코드
+      const form = document.querySelector("#signup-form");
+      const lastNameInput = document.querySelector("#last-name-input");
+      const firstNameInput = document.querySelector("#first-name-input");
+      const emailInput = document.querySelector("#email-input");
+      const submitButton = document.querySelector("#submit-button");
+      const cancelButton = document.querySelector("#cancel-button");
+      const errorMessage = document.querySelector("#error-message");
+
+      function validateForm() {
+        if (
+          lastNameInput.value === "" ||
+          firstNameInput.value === "" ||
+          emailInput.value === ""
+        ) {
+          errorMessage.textContent = "빈 칸을 입력하시오";
+          return false;
+        } else {
+          errorMessage.textContent = "";
+          return true;
+        }
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (validateForm()) {
+          alert("회원 가입이 완료되었습니다");
+          form.reset();
+        }
+      });
+
+      cancelButton.addEventListener("click", () => {
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
