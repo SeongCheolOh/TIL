@@ -24,4 +24,12 @@ public class BookServiceImpl implements BookService{
 	public Map<String, Object> detail(Map<String, Object> map){
 	    return this.bookDao.selectDetail(map);
 	}
+	
+	//책 수정 기능 서비스 메소드
+		@Override  
+		public boolean edit(Map<String, Object> map) {  
+		int affectRowCount = this.bookDao.update(map);  
+		return affectRowCount == 1;  
+
+		}  
 }

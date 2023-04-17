@@ -23,4 +23,9 @@ public class BookDAO {//저장소 역할을 하는 클래스
 	public Map<String, Object> selectDetail ( Map<String, Object>map ) {
 		return this.sqlSessionTemplate.selectOne("book.select_detail", map);
 	}
+	
+	//책 수정 DAO메소드
+	public int update(Map<String, Object> map) {  
+		return this.sqlSessionTemplate.update("book.update", map);  
+		}  
 }

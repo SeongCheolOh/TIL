@@ -1,0 +1,57 @@
+1교시 - 하나은행 >> 프론트
+	할? 말? 그치만 백이 더 좋은걸
+	주저리 주저리
+	
+	DI
+	AOP - 관점 지향 프로그램
+
+2교시 - 금요일 파일 임포트
+	남가람북스 - p.97 chapter5
+
+	[mvc]
+	View
+	Mav mav = new ModelAndView();
+	mav.addObject("data", list);
+	mav.setViewName("book/cinsert");
+
+	Controller
+	요청 -> 처리 -> 응답
+		서비스 호출
+		mav 세팅
+	@RequestMapping(value="/cinsert") //요청
+	public MAV cinsert( @RequestParam Map<String, Object> map ){ //처리
+	return mav; // 응답
+	}
+
+	Model
+	컨트롤러에서 보내준 처리를 담당하는 영역
+	1) VO(DTO) - 컨트롤러랑 DAO 중간에서 실제 비즈니스 영역
+	2) DAO - 데이터베이스랑 관계된 것
+
+	@(어노테이션) - 명령어(스프링 프레임워크 5.0 스프링부트 3.0)
+	~.xml  - 메타데이터로 설정 세팅 (과거 3.0 4.0버전)
+
+	빈 <bean> - 스프링 프레임워크가 컨테이너 안에서 관리하는 자바 객체
+	스프링 프레임워크가 자바 객체를 수행하려면 빈에 등록되어있어야 한다
+	방법1) servlet-context.xml 파일 내부 <bean></bean>태그 안에 넣기
+	방법2) @(어노테이션) 해당 클래스 위에 붙여주기 >> @Controller, @Service, @Repository 등
+
+	로그인 유지할 때 사용하는 방법
+	쿠키
+	1단계) 처음 웹사이트 방문자가 요청
+	2단계) 웹사이트 서버에서 쿠키를 만들어 응답페이지와 같이 쿠키를 클라이언트에게 전송
+	3단계) 쿠키가 클라이언트를 웹브라우저에 저장
+	4단계) 클라이언트가 재요청하면 쿠키랑 정보 같이 서버로 재요청
+	5단계) 서버가 방문자를 인식하여 저장된 쿠키를 그대로 응답(빠른 처리속도, 맞춤형)
+	섹션
+	1단계) 처음 웹사이트 방문자가 요청
+	2단계) 웹사이트 서버에서 섹션을 만들어 보관
+	3단계) 클라이언트가 재요청 >> 서버에 있는 섹션 정보를 응답해줌
+
+	Lombok 사용하기
+	setter/getter 메소드를 @으로 사용하기
+	1단계) DI하기
+	2단계) down, install, web 연결
+	jar 파일 설치 실행 >> cdm >> cd 해당폴더위치 >> java -jar [파일명].jar
+	3단계) sts 재부팅
+	4단계) @Data
