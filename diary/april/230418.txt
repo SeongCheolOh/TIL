@@ -1,0 +1,77 @@
+1교시 - 스프링부트 sts4 설치
+	스프링 프레임워크 sts3
+
+	1. sts4 설치하기
+		>> 3.xx버전은 자바 17버전 이상이다
+		>> 2.7.11버전으로 설정
+		mysql
+		devtools
+		data jpa
+		sqldriver
+		springweb
+		th??
+
+	test 용도 사용하는 db = h2
+	h2 db의 드라이브를 스프링부트로 다운
+	DI써주면 된다
+	1) google >> maven repository >> h2 검색 >> 버전은 사실 크게 상관없다
+	2) 롬복도  설치
+	8080포트 변경
+	src/main/resources/application.properties >> yml확장자로 변경은 선택
+	server.port = xxxx
+	
+	2. 에디터 설치
+
+3교시 - 롬복 설치
+	mvnrepository >> lombok >> gradle 복붙(build.gradle -> dependencies) 후 그래들 리프레시
+	lombok.jar 다운받고 cmd >> cd 경로 >> java -jar lombok.jar >> sts4 찾아서 잡아주기 >> 재시작
+
+	자바 파일 작성해야하는 역할
+	1) controller
+		요청 >> 처리 >> 응답
+	2) DTO (Data Transaction Object) = VO (View Object) = 그릇
+		setter/getter 롬복을 이용
+	3) DAO (Data Access Object)
+		데이터베이스와 연결하는 역할
+	4) Service
+		비즈니스 역할 - 실제 실행
+		interface Member
+		class MemberImpl
+
+	SQL문
+	데이터베이스에 SQL문을 전달해 주고 결과 받고
+ 	book_SQL.xml - 마이바티스 방식 - 스프링 프레임워크 또는
+  	    <![CDATA[
+   	      <insert  book_id, bookname from book ></insert>
+       	             컬럼명
+    	   ]]>
+
+ 	book_SQL.java - JPA방식 - 스프링 부트
+    	  String book_id; //엔티티  테이블의 컬럼명을 부른 말  
+
+	View 화면 부분
+		book.jsp
+		book.html
+
+	만약 mvc 구조처럼 WEB-INF폴더가 필요하면 폴더 만들어서 사용
+	application.yml
+
+4교시
+
+	h2database.com/ 에서 찾아야하는데 못찾음
+	google >> [h2 spring boot 연결] 검색
+
+5교시 - 
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+---------mysql db와 연결하기
+1. di해준다
+2. application.properties에 설정한다
+# MySQL 연결 설정
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/sbb?serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=1234
+3. mysql 워크벤치를 켜서
+	sbb 스키마를 만들어준다
+
+~8교시 - 2.05 리포지터리 findById 까지
