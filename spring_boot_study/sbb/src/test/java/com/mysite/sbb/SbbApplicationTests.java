@@ -17,7 +17,7 @@ class SbbApplicationTests {
     @Autowired
     private QuestionRepository questionRepository;
 
-    @Test
+    @Test //데이터 저장
     void testJpa() {        
         Question q1 = new Question();
         q1.setSubject("sbb가 무엇인가요?");
@@ -31,20 +31,25 @@ class SbbApplicationTests {
         q2.setCreateDate(LocalDateTime.now());
         this.questionRepository.save(q2);  // 두번째 질문 저장
     }
-    
-    @Test
-    void testJpa2() {
-    	List<Question> all = this.questionRepository.findAll();
-    	System.out.println(all.get(0).getSubject() + "test~~~~~~~~~~~");
-    	System.out.println(all.get(2).getSubject());
-    	assertEquals(18, all.size());//assertEquals(기댓값, 실제처리값)
+//    @Test
+    void findAll() {//findAll = 모든 데이터 조회
+        List<Question> all = this.questionRepository.findAll();
+        assertEquals(2, all.size());
+
+        Question q = all.get(0);
+        assertEquals("sbb가 무엇인가요?", q.getSubject());
     }
-    @Test
-    void testJpqFindById() {
-    	Optional<Question> oq = this.questionRepository.findById(10);
-    	if(oq.isPresent()) {
-    		Question q = oq.get();
-    		assertEquals("sbb subject2", q.getSubject());
-    	}
+//    @Test
+    void findById() {
+        Optional<Question> oq = this.questionRepository.findById(1);
+        if(oq.isPresent()) {
+            Question q = oq.get();
+            assertEquals("sbb가 무엇인가요?", q.getSubject());
+        }
+    }
+//    @Test
+    void findBySubject() {
+        Question q = this.questionRepository.findBySubject("sbb가 무엇인가요?");
+        assertEquals(1, q.getId());
     }
 }
