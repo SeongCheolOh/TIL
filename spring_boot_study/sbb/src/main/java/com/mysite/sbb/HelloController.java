@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloController {
-
-	@GetMapping("/hello")
-	@ResponseBody
-	public String hello() {
-		return "ㅂㅂ";
-	}
+    @GetMapping("/hello")
+    @ResponseBody
+    public String hello() {
+        return "해위 여러분들";
+    }
 }

@@ -1,10 +1,10 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '2.7.11-SNAPSHOT'
+	id 'org.springframework.boot' version '2.7.12-SNAPSHOT'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
-group = 'com.example'
+group = 'com.mysite'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -20,15 +20,14 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	// https://mvnrepository.com/artifact/com.h2database/h2
-	implementation 'com.h2database:h2' 
+	// h2 db 설정
+//	testImplementation 'com.h2database:h2:2.1.214'
+	runtimeOnly 'com.h2database:h2'
+	//자바 프로그램에서 H2 데이터베이스를 사용할 수 있게 >> 25번줄 주석처리하자
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	//롬복 설치
 	compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    //h2 데이터베이스 설치
-    runtimeOnly 'com.h2database:h2'
-    //Jpa 라이브러리 설치
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
 
 tasks.named('test') {

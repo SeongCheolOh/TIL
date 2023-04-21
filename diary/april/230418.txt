@@ -2,24 +2,29 @@
 	스프링 프레임워크 sts3
 
 	1. sts4 설치하기
-		>> 3.xx버전은 자바 17버전 이상이다
-		>> 2.7.11버전으로 설정
-		mysql
+		>> 3.xx버전은 자바 17버전 이상이다 >> 11로
+		>> 2.7.11(스냅샷)버전으로 설정
+		mysql driver
 		devtools
 		data jpa
-		sqldriver
 		springweb
-		th??
+		thymeleaf
 
 	test 용도 사용하는 db = h2
-	h2 db의 드라이브를 스프링부트로 다운
-	DI써주면 된다
-	1) google >> maven repository >> h2 검색 >> 버전은 사실 크게 상관없다
-	2) 롬복도  설치
+	사용법
+	1) google >> maven repository >> h2 검색 >> 버전은 상관없다
+	// https://mvnrepository.com/artifact/com.h2database/h2
+	testImplementation 'com.h2database:h2:2.1.214'
+	2) 드라이버 등록
+	runtimeOnly 'com.h2database:h2'
+	3) h2 db sts properties 검색 or 교재 2-03장에도 있다
+
+	롬복  설치
 	8080포트 변경
-	src/main/resources/application.properties >> yml확장자로 변경은 선택
+	application.properties (yml확장자로 변경은 선택)
 	server.port = xxxx
-	
+
+
 	2. 에디터 설치
 
 3교시 - 롬복 설치
