@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 
 import org.springframework.data.annotation.CreatedDate;
 
-import com.mysite.sbb.Question;
+import com.mysite.sbb.question.Question;
 
 import lombok.Getter;
 import lombok.Setter;
