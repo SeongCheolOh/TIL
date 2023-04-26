@@ -17,6 +17,7 @@ import com.mysite.sbb.answer.Answer;
 import com.mysite.sbb.answer.AnswerRepository;
 import com.mysite.sbb.question.Question;
 import com.mysite.sbb.question.QuestionRepository;
+import com.mysite.sbb.question.QuestionService;
 
 @SpringBootTest
 class SbbApplicationTests {
@@ -142,4 +143,15 @@ class SbbApplicationTests {
 		assertEquals(2, a.getQuestion().getId());//그 답변의 질문 id가 2인지 조회
 	}
 	
+	@Autowired
+    private QuestionService questionService;
+
+//    @Test
+    void addData() {
+        for (int i = 1; i <= 300; i++) {
+            String subject = String.format("테스트 데이터입니다:[%03d]", i);
+            String content = "내용무";
+            this.questionService.create(subject, content);
+        }
+    }
 }
