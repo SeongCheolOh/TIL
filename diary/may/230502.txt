@@ -1,0 +1,36 @@
+1교시 - 자바 복습...선생님 바뀌었는데
+	이때까지 뭐 했나 싶다
+	변수 타입 >> 원시형 / 참조형
+
+2교시 - 메소드 타입 >> void/ 그 외
+	리턴값도 동일해야 한다
+	private / public
+	static 정적 / nonstatic
+	String new >> 없는 이유 자바가 알아서
+	객체 참조 
+3교시 - 자바의 정석
+
+4교시 - 제임스 고슬링
+	접근제한자
+	컬렉션프레임워크 list map set
+	String array
+	List<> 리스트는 인터페이스 >> 메모리생성 x(new List<>~)
+		>>new ArrayList<>~~만 가능
+
+5교시 - 인터페이스 >> 중요
+	형태를 지정 불가능, 접근제한자 기본 public
+	상속 object
+	다형성
+	for
+	arrayList
+	vo(entity, DTO)
+6교시 - MYSQL
+	MVC 패턴 - model, view, controller
+	VO
+	List
+7교시 - map<key, value>
+	hashMap >> 1차원
+	ArrayList<HashMap<String,String>> boardList = new ArrayList<>(); >> 테이블 구조
+	
+8교시 - 주소 & 키=밸류
+	enc - utf-8
