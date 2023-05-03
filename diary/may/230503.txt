@@ -1,0 +1,31 @@
+1교시 - 이클립스
+	project - new - other - dynamic~~ - [context root] - genera~ 체크박스 체크
+	finish
+	src - main - webapp - WEB-INF - web.xml
+
+2교시 - window - properties - enc - utf-8
+	src/main/webapp >> new jsp(java server page) file
+		
+3 4교시 - index.jsp
+	<tr></tr>
+	<td></td>
+	<th></th>
+	list.jsp
+	향상된 for문
+	sqld
+jsp
+jdbc
+
+5교시 - mysql 연결
+
+6교시 - 직접 해보기
+7교시 - DBCon.java
+	try/catch
+	못알아먹겠네
+	최범균 - jsp2.3 p.99
+	톰캣 >> 서버
+	
+숙제 - 컬럼 10개짜리 테이블 생성
+	이름 컬럼명 데이터타입 free
+	최소 5개 로우 insert
+	jsp 작성
