@@ -1,5 +1,0 @@
-{pno : 1, name : 상품1, company : 멋진회사1, price : 737}
-{pno : 2, name : 상품2, company : 멋진회사2, price : 432}
-{pno : 3, name : 상품3, company : 멋진회사3, price : 383}
-{pno : 4, name : 상품4, company : 멋진회사4, price : 257}
-{pno : 5, name : 상품5, company : 멋진회사5, price : 994}

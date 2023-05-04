@@ -24,3 +24,21 @@
 	name >> 자바 사용하려고
 	id >> js사용하려고
 	statement >>?
+
+!@#$~$~!@~#$
+
+~ 7교시 - 수정(update), 삭제(delete)
+	git hub
+
+8교시 - 
+
+[숙제]
+
+[Spring]
+	AOP 정은님
+	DI dependency injection 오성철
+	IoC inversion of controll 윤은진님
+	하나씩 조사해오기(ppt로)
+	
+	crud 연습
+
