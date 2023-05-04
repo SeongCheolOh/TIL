@@ -1,0 +1,26 @@
+1교시 - 검색
+	<form></form> 사용 이유 = 데이터를 서버에 보내기 위해
+	localhost/요청주소?키=밸류
+	<form>
+		<input></input>
+		<button></button>
+	</form>
+	>> http Method 중 폼태그는
+			GET (select) [R] default
+			POST >>insert [C]
+			-------------------
+			PUT >>update [U]
+			DELETE [D]
+			두 개는 post에 포함
+	에이작스Ajax
+2교시 - 검색-ing
+	getParameter >>?
+	검색 마무리
+3교시 - 유저등록
+	버튼태그 - type
+		  onclick
+		  이벤트들은 전부 소문자
+		  이벤트영역 >> 스크립트 영역
+	name >> 자바 사용하려고
+	id >> js사용하려고
+	statement >>?
