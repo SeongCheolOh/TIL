@@ -1,0 +1,54 @@
+1교시 - 시험(준비)
+	1) erd 그리기
+	
+2교시 - 
+
+spring starter project
+1) type - groovy
+
+2) 2.7.11
+
+3) developer tools - 3개 전부 다
+    sql - Spring Data JDBC
+           MyBatis Framework
+	MySQL Driver
+    web - Spring Web
+	Spring Web Services
+
+3교시 - properties 설정
+	언어설정 enc
+
+
+4~5교시 - 시험
+
+6교시 - 2교시 재개
+	gradle >>  jsp랑 jstl dependency
+	
+mvc 패턴
+view controller buisness(model)
+	controller에 
+
+7교시 - 과제 발표
+
+리턴타입 string인 이유
+
+8교시 - db접근 방법
+	getConnection - Spring에선 구현되어있다
+	
+	mybatis
+
+검색)
+R-DBMS relationship DBMS
+
+정보처리기사
+컴활1급
+sql-d
+
+@SpringBootApplication
+
+http - get / host 매핑
+
+restful
+restAPI
+
+gradle groovy / kotlin 차이
