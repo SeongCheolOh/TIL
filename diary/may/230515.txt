@@ -1,0 +1,23 @@
+1교시 - 업로드
+	갯수로는 불가 - url 길이 제한 때문 >> post 메소드
+
+2교시 - 게시판(테이블 생성) 후 
+
+3,4교시 - service부터 직접 작성해보기
+
+
+5교시 - <%@include 
+검색 ---------------
+c:foreach
+attribute
+model
+${}
+
+순서 ----------------
+xml
+mapper 
+service
+controller
+
+view - 수정, 삭제 버튼
+xml - update, delete

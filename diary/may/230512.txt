@@ -1,0 +1,19 @@
+1교시 - js의 탄생기
+	on~~(소문자) = 이벤트 = 스크립트 영역
+	dom
+	document object model
+	document
+	--------------------------
+	 bom
+	browser object model
+	window
+
+2교시 - js
+
+3교시 - 회원가입
+
+검색 - get mapping / post mapping
+	ajax / json
+	form 태그
+	파라미터
+	setAttribute

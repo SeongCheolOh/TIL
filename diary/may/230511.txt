@@ -1,0 +1,36 @@
+1교시 - 프로그래머스
+	자바 최소 1.8....
+	
+데이터타입이 없고 클래스와 이름이 똑같으면 생성자
+public void ~~(){} >> 메소드
+
+~~ vo
+
+5교시 - 
+어노테이션(autowired, controller 등)
+
+6교시 - 
+el태그
+
+7교시 -
+session 
+scope
+	request.setAttribute
+	
+8교시 -
+git
+
+
+
+
+검색)
+서블릿
+mybatis - MapperScan
+jsp 4가지 scope 
+
+싱글톤
+
+최범균 jsp2.3
+구멍가게코딩단 spring
+토비스프링
+setAttribute
