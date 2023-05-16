@@ -1,0 +1,59 @@
+1교시 - 복습
+
+db 만들기
+
+--------------------숙제
+sql 포트 :3307로 바꾸기
+
+NEW PROJECT- SP
+GROUP - COM.EXAM
+packaging - war
+group - com.example
+artifact - pro
+package - com.example.pro >> next
+-------------
+lombok / mybatis framework / mysql driver / spring boot devtools /
+configuration proc/ spring data jdbc/ spring web / spring web services
+----finish
+setting.gradle - 'pro' >> refresh gradle
+--------------------
+properties 설정 후 데모서버 실행
+--------------------
+com.example.pro >> controller 패키지 생성, 파일 만들고
+/join @GetMapping
+-------------------
+src >> main >> 폴더 생성
+webapp >> WEB-INF >> views >> 1. common // 2. user
+common에는 common.jsp 만들고 첫째줄 밑으로다 지우기
+user에는 view 작성
+-------------------
+<form post> 후 conroller에 @PostMapping 작성
+-------------------
+DB 참조해서 vo 작성, service 작성 @Service
+-------------------
+@Controller 
+@RestController
+>> url mapping
+
+@Configuration
+>>configure
+
+@Service
+@Repository >> mybatis가 제공하는걸 사용하기때문에 필요 x
+@Component >> 그 외
+
+@Bean
+---------------------
+mapper - UserInfoMapper(인터페이스) 생성
+>> src/main/resources >> mapper >> xml 생성
+UserInfoMapper.java 작성
+
+추천 >> mapper >> interface >> service >> controller
+
+회원가입 / 로그인 / 프로필
+
+페이징
+******************************************검색
+common
+@Slf4j
+Model, ModelAttribute
