@@ -1,0 +1,23 @@
+1,2 교시 - 페이징
+
+3교시 - DB
+
+4교시 - 페이징 마저
+
+// cmd >> ipconfig >> ipv4주소 확인
+// mysql >> + >> hostname >> ip주소, 비밀번호 넣고 테스트
+mysql >> + >> hostname >> localhost, 비번 넣고 생성
+
+create user 'ezen'@'%' identified by 'test1234';
+grant all privileges on exam.*
+
+5교시 - 깃 어카운트 토큰 삭제법
+제어판 - 사용자계정 - 자격증명관리 - windows 자격증명 - github~~ 삭제
+
+6~8교시 - 
+
+파파고 api
+google - rest api client chrome
+
+------------------
+crud 연습
