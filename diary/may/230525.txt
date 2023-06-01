@@ -1,0 +1,39 @@
+1,2교시 - java for, array
+
+3교시 - ql활용 필수 지식
+
+DDL 데이터 정의 언어
+	스키마 schema = DBMS~~~
+	도메인 domain = 속성의 타입과 제약조건 등을 설정한 정보(ex >> varchar(120))
+	테이블 table = 데이터 저장 공간
+	뷰 veiw = 1개 이상의 물리 테이블을 통해 만드는 가상의 [논리]테이블
+	인덱스 index = 빠른 검색을 위한 데이터 구조
+	
+	명령어
+	생성 - create
+	변경 - alter
+	삭제 - drop
+		truncate > 로깅작업 건너뛰어 롤백 불가
+
+조인 유형
+	내부 조인(inner join) = 교집합
+		동등 조인(equi join)
+		자연 조인(natural join)
+		교차 조인(cross join)
+	외부 조인(outter join) = 합집합
+		왼쪽 외부 조인(left outer join)
+		오른쪽 외부 조인(right outer join)
+		완전 외부 조인
+
+DCL과 TCL
+DCL = 권한 부여 / 회수
+TCL = 트랜잭션 확정 / 취소, 복귀지점 설정
+
+트랜잭션의 특징 ACID
+
+인덱스의 개념 = 데이터를 빠르게 검색할 수 있는 수단, 조회속도 높여줌
+
+데이터 사전
+
+4교시 - oracle ddl 실습(create, drop, alter)
+		dml(insert, delete, 

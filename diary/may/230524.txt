@@ -1,0 +1,52 @@
+1~2교시 = java 반복문
+
+3교시 - 정처기 시험준비
+DB
+RDBMS(관계형 데이처베이스 - table)
+트랜잭션
+ACID      Atomicity(원자성) 
+	consistency(일관성)
+	Isolation(고립성)
+	Durability(지속성)	
+
+데이터 모델링 프로세스
+1. 요구사항 수집/분석 (용도 식별, 요구사항 정의서 작성)
+2. 설계 1) 개념 모델링 (추상화)
+	2) 논리 모델링 (구조화)
+	3) 물리 모델링
+3. 데이터베이스 구현
+
+정보공학 표기법 / 바커 표기법
+
+정규화(Normalization) / 반정규화(Denormalization)
+
+sql구문
+DDL ( Data Definition Language 데이터 정의어)
+동작하자마자 커밋 되기때문에 롤백 불가
+create / alter / drop / truncate
+
+DML ( Data Manipulation Language 데이터 조작어)
+select / insert / update / merge / delete
+
+DCL ( Data Control Language 데이터 제어어)
+grant / revoke
+권한
+----------------------------
+sql 활용
+
+데이터 사전 (Data Dictionary)
+	1) 사용자 정보(ID, PW, 권한 등)
+	2) 데이터베이스 객체(테이블, 인덱스, 뷰 등)
+	3) 무결성 제약 상태
+	4) 함수, 프로시저 및 트리거 정보 등
+DDL 데이터 정의 언어
+	스키마 schema
+	도메인 domain
+	테이블 table
+	뷰 veiw
+	인덱스 index
+
+Join------------------
+
+인덱스
+뷰 >> 가상테이블
