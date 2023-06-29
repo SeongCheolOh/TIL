@@ -1,0 +1,7 @@
+1교시 - 과평 실기 정리
+
+예시문제 해석, 방향 제시
+
+2~4 교시 - 실습
+db 생성, 삽입
+index(header, footer, basic.css)

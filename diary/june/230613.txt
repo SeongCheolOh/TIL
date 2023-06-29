@@ -1,0 +1,22 @@
+1교시 - 이력서의 git, youtube 중요성
+	html 부모, 자식과 후손의 관계
+2교시 - db연결
+
+~5교시까지 완성
+include  : header.jsp
+	footer.jsp
+
+db에 넣기 : dbInsert.jsp
+db자료 수정 : dbUpdate.jsp
+
+시작화면 : index.jsp
+회원등록 : memInsert.jsp   
+		조회 : listSelectUpdate.jsp
+		등록 : dbInsert.jsp
+회원목록조회/수정 : listSelectUpdate.jsp
+회원매출조회 : saleSelect.jsp
+회원정보수정 : update.jsp
+		수정 : dbUpdate.jsp
+		조회 : listSelectUpdate.jsp
+
+8교시까지 프로젝트
